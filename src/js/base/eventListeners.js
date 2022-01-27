@@ -8,4 +8,5 @@ export default function eventListeners(refs) {
   //   watched.addEventListener('click', onWatched);
   //   queue.addEventListener('click', onQueue);
   //   nIceTeam.addEventListener('click', nIceTeam);
+  console.log('Hello World');
 }
