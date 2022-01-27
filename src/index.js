@@ -1,6 +1,9 @@
 import './sass/main.scss';
-import { refs } from './js/refs';
+import { refs } from './js/global/refs';
+import eventListener from './js/eventListener';
 
-function start() {}
+function start() {
+  eventListener(refs);
+}
 
 start();
