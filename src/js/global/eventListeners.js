@@ -1,6 +1,6 @@
 // import onHome from './onHome';
 
-export default function EventListener(refs) {
+export default function eventListeners(refs) {
   const { home, library, searchMovie, watched, queue, nIceTeam } = refs;
   //   home.addEventListener('click', onHome);
   //   library.addEventListener('click', onLibrary);
