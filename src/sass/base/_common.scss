@@ -3,7 +3,11 @@ body {
   font-weight: 500;
   font-size: 12px;
   line-height: 1.33;
-  color: #000000;
+  color: $primary-color;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body,
@@ -16,10 +20,6 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 img {
