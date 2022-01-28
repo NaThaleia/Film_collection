@@ -1,4 +1,5 @@
-export default function onHero (evt) {
-    console.log(`click on Hero ${evt.target}`);
-    return;
+export default function onHero(e) {
+  console.dir(e);
+
+  return;
 }
