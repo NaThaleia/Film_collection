@@ -1,9 +1,13 @@
 .footer {
-  font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.17;
   color: rgba(84, 84, 84, 1);
   background-color: #f7f7f7;
+  @media screen and (min-width: 768px) {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.17;
+  }
 }
 .footer-container {
   display: flex;
