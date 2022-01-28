@@ -2,20 +2,39 @@
   font-size: 14px;
   line-height: 1.17;
   color: rgba(84, 84, 84, 1);
-  background-color: #f7f7f7;
   @media screen and (min-width: 768px) {
     font-weight: 400;
     font-size: 16px;
-    line-height: 1.17;
   }
 }
 .footer-container {
+  background-color: #f7f7f7;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  height: 77px;
-  padding-top: 30px;
-  padding-bottom: 28px;
+  padding-top: 29px;
+  padding-bottom: 30px;
+
+  @media screen and (min-width: 481px) {
+    padding-top: 30px;
+    padding-bottom: 28px;
+  }
 }
+
+.footer-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer-top {
+  @media screen and (max-width: 425px) {
+    margin-bottom: 10px;
+  }
+}
+.footer-bottom {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
 .team-modal-btn {
   padding: 0;
   background-color: transparent;
@@ -25,9 +44,29 @@
 
 .team-modal-btn__styles {
   text-decoration: underline;
+  border-radius: 5px;
   color: rgba(84, 84, 84, 1);
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: #ff6b08;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 5px 5px 4px rgba(253, 68, 36, 0.37);
+  }
 }
 
 .fa-heart {
   color: #ff6b08;
+  &:hover,
+  &:focus,
+  &:active {
+    animation: beat 0.25s infinite alternate;
+    transform-origin: center;
+  }
+}
+
+@keyframes beat {
+  to {
+    transform: scale(1.4);
+  }
 }
