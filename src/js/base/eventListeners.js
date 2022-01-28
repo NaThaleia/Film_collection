@@ -8,8 +8,8 @@ import onTeamModal from '../listeners/onTeamModal';
 
 export default function eventListeners(refs) {
   const { home, library, searchMovie, hero, watched, queue, nIceTeam } = refs;
-  //   home.addEventListener('click', onHome);
-  //   library.addEventListener('click', onLibrary);
+  home.addEventListener('click', onHome);
+  library.addEventListener('click', onLibrary);
   //   searchMovie.addEventListener('submit', onSearchMovie);
   hero.addEventListener('click', onHero);
   //   watched.addEventListener('click', onWatched);

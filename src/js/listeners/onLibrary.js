@@ -1,4 +1,4 @@
-export default function onLibrary (evt) {
-    console.log(`click on Library ${evt.target}`);
-    return;
+export default function onLibrary(evt) {
+  console.log(`click on Library ${evt.target}`);
+  return;
 }

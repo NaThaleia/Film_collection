@@ -1,6 +1,6 @@
 export const refs = {
-  // home: document.querySelector('.home'),
-  // library: document.querySelector('.library'),
+  home: document.querySelector('.home'),
+  library: document.querySelector('.library'),
   // searchMovie: document.querySelector('.search-movie'),
   hero: document.querySelector('.hero'),
   // watched: document.querySelector('.watched'),
