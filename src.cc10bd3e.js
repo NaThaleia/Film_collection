@@ -23,4 +23,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss");var e=require("./js/base/refs"),s=u(require("./js/base/eventListeners")),r=u(require("./js/base/request"));function u(e){return e&&e.__esModule?e:{default:e}}function t(){(0,s.default)(e.refs)}t(),(0,r.default)().then(e=>console.log(e));
 },{"./sass/main.scss":"clu1","./js/base/refs":"rzWj","./js/base/eventListeners":"LPK7","./js/base/request":"QU1Y"}]},{},["Focm"], null)
-//# sourceMappingURL=/Film_collection/src.1660a1ec.js.map
+//# sourceMappingURL=/Film_collection/src.cc10bd3e.js.map
