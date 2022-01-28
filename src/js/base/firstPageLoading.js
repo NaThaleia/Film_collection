@@ -5,6 +5,8 @@ export default function firstPageLoading() {
   fetchApiWeek().then(data => {
     const arrMovie = data.results
 
+      /* И ВОООБЩЕ ЭТО ПОВТОРЯЮЩАЯСЯ ФУНЦИЯ ПОЛУЧАЕТСЯ */
+
       .map(({ poster_path, title, release_date, genre_ids }) => {
         /* ТУТ ДОЛЖНА БЫТЬ ФУНКЦИЯ КОТОРАЯ ОБРЕЗАЕТ ДАТУ */
 
