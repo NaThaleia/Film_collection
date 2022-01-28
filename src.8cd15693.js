@@ -21,4 +21,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{"../listeners/onHome":"jOiQ","../listeners/onLibrary":"ljQW","../listeners/onSearchMovie":"WT8E","../listeners/onHero":"lk7g","../listeners/onWatched":"DFB4","../listeners/onQueue":"lZV9","../listeners/onTeamModal":"Iz5z"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss");var e=require("./js/base/refs"),s=r(require("./js/base/eventListeners"));function r(e){return e&&e.__esModule?e:{default:e}}function u(){(0,s.default)(e.refs)}u();
 },{"./sass/main.scss":"clu1","./js/base/refs":"rzWj","./js/base/eventListeners":"LPK7"}]},{},["Focm"], null)
-//# sourceMappingURL=/Film_collection/src.d71a5d40.js.map
+//# sourceMappingURL=/Film_collection/src.8cd15693.js.map
