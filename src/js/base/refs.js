@@ -5,5 +5,5 @@ export const refs = {
   hero: document.querySelector('.hero'),
   // watched: document.querySelector('.watched'),
   // queue: document.querySelector('.queue'),
-  // nIceTeam: document.querySelector('[data-modal-team-open]'),
+  // nIceTeam: document.querySelector('.team-modal-btn'),
 };
