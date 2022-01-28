@@ -47,13 +47,9 @@
 }
 
 .title {
-  font-family: Roboto;
-  font-weight: 500;
   text-transform: uppercase;
   font-size: 30px;
-  line-height: 35px;
-
-  color: #000000;
+  line-height: 1.17;
 }
 
 .table {
@@ -61,21 +57,12 @@
 }
 
 .left {
-  font-family: Roboto;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.33;
   color: #8c8c8c;
   padding-right: 41px;
   padding-bottom: 10px;
 }
 
 .right {
-  font-family: Roboto;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.33;
-  color: #000000;
   padding-left: 41px;
 }
 
@@ -93,32 +80,18 @@
 
 .about {
   margin-top: 10px;
-  font-family: Roboto;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.33;
   text-transform: uppercase;
-  color: #000000;
   margin-bottom: 10px;
 }
 
 .text {
-  font-family: Roboto;
-  font-weight: 500;
-  font-size: 12px;
   line-height: 1.67;
-
-  color: #000000;
   margin-bottom: 20px;
 }
 
 .btn {
   width: 136px;
   height: 44px;
-  font-family: Roboto;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.33;
   text-align: center;
   text-transform: uppercase;
   background-color: #ffffff;
