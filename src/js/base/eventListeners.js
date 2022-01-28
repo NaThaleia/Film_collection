@@ -10,7 +10,7 @@ export default function eventListeners(refs) {
   const { home, library, searchMovie, hero, watched, queue, nIceTeam } = refs;
   home.addEventListener('click', onHome);
   library.addEventListener('click', onLibrary);
-  //   searchMovie.addEventListener('submit', onSearchMovie);
+  searchMovie.addEventListener('submit', onSearchMovie);
   // hero.addEventListener('click', onHero);
   //   watched.addEventListener('click', onWatched);
   //   queue.addEventListener('click', onQueue);
