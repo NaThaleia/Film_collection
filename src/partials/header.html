@@ -12,8 +12,21 @@
         <li><a class="header__navListLink library" href="#">My library</a></li>
       </ul>
     </nav>
-    <form action="">
-      <input placeholder="Поиск фильмов" class="some-input" type="text" />
+    <form class="search-film-form" action="">
+      <div class="search-film-inputs">
+      <input placeholder="Поиск фильмов" class="some-input " type="text" />
+     <input type="submit" name="" value="" class="submit" />
+    </div>
+      <span class="search-errors is-hidden">Search result not successful. Enter the correct movie name аnd</span>
+       
+     
     </form>
+    <div class="library-navigation">
+      <button type="button" class=" watched-btn is-hidden orange ">
+        Watched
+      </button>
+      <button type="button" class=" queue-btn is-hidden">Queue</button>
+    </div>
+    </div>
   </div>
 </header>
