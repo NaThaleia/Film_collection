@@ -1,0 +1,29 @@
+.footer {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.17;
+  color: rgba(84, 84, 84, 1);
+  background-color: #f7f7f7;
+}
+.footer-container {
+  display: flex;
+  justify-content: center;
+  height: 77px;
+  padding-top: 30px;
+  padding-bottom: 28px;
+}
+.team-modal-btn {
+  padding: 0;
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+
+.team-modal-btn__styles {
+  text-decoration: underline;
+  color: rgba(84, 84, 84, 1);
+}
+
+.fa-heart {
+  color: #ff6b08;
+}
