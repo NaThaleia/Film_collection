@@ -1,4 +1,8 @@
-export default function onHome (evt) {
-    console.log(`click on Home ${evt.target}`);
-    return;
+// import { refs } from '../base/refs';
+import firstPageLoading from '../base/firstPageLoading';
+
+export default function onHome(evt) {
+  firstPageLoading();
+
+  console.log('я дома');
 }
