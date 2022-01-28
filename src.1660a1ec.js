@@ -1,6 +1,6 @@
 parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcelRequire,u="function"==typeof require&&require;function f(t,n){if(!r[t]){if(!e[t]){var i="function"==typeof parcelRequire&&parcelRequire;if(!n&&i)return i(t,!0);if(o)return o(t,!0);if(u&&"string"==typeof t)return u(t);var c=new Error("Cannot find module '"+t+"'");throw c.code="MODULE_NOT_FOUND",c}p.resolve=function(r){return e[t][1][r]||r},p.cache={};var l=r[t]=new f.Module(t);e[t][0].call(l.exports,p,l,l.exports,this)}return r[t].exports;function p(e){return f(p.resolve(e))}}f.isParcelRequire=!0,f.Module=function(e){this.id=e,this.bundle=f,this.exports={}},f.modules=e,f.cache=r,f.parent=o,f.register=function(r,t){e[r]=[function(e,r){r.exports=t},{}]};for(var c=0;c<t.length;c++)try{f(t[c])}catch(e){i||(i=e)}if(t.length){var l=f(t[t.length-1]);"object"==typeof exports&&"undefined"!=typeof module?module.exports=l:"function"==typeof define&&define.amd?define(function(){return l}):n&&(this[n]=l)}if(parcelRequire=f,i)throw i;return f}({"clu1":[function(require,module,exports) {
 
-},{}],"rzWj":[function(require,module,exports) {
+},{"./../images/rectangle2-min.jpg":[["rectangle2-min.dc072569.jpg","rPeu"],"rPeu"],"./../images/search2.png":[["search2.ad918c6d.png","pL6O"],"pL6O"]}],"rzWj":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.refs=void 0;const e={home:document.querySelector(".home"),library:document.querySelector(".library"),hero:document.querySelector(".hero"),addToWatch:document.querySelector(".addToWatch"),addToQueue:document.querySelector("addToQueue")};exports.refs=e;
 },{}],"jOiQ":[function(require,module,exports) {
 "use strict";function e(e){console.log(`click on Home ${e.target}`)}Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=e;
@@ -23,4 +23,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss");var e=require("./js/base/refs"),s=u(require("./js/base/eventListeners")),r=u(require("./js/base/request"));function u(e){return e&&e.__esModule?e:{default:e}}function t(){(0,s.default)(e.refs)}t(),(0,r.default)().then(e=>console.log(e));
 },{"./sass/main.scss":"clu1","./js/base/refs":"rzWj","./js/base/eventListeners":"LPK7","./js/base/request":"QU1Y"}]},{},["Focm"], null)
-//# sourceMappingURL=/Film_collection/src.7a48bc3f.js.map
+//# sourceMappingURL=/Film_collection/src.1660a1ec.js.map
