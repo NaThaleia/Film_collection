@@ -7,6 +7,6 @@ export default function eventListeners(refs) {
   //   searchMovie.addEventListener('submit', onSearchMovie);
   //   watched.addEventListener('click', onWatched);
   //   queue.addEventListener('click', onQueue);
-  //   nIceTeam.addEventListener('click', nIceTeam);
+  //   nIceTeam.addEventListener('click', onTeamModal);
   console.log('Hello World');
 }

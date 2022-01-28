@@ -4,5 +4,5 @@ export const refs = {
   //   searchMovie: document.querySelector('.search-movie'),
   //   watched: document.querySelector('.watched'),
   //   queue: document.querySelector('.queue'),
-  //   nIceTeam: document.querySelector('.nice-team'),
+  //   nIceTeam: document.querySelector('[data-modal-team-open]'),
 };
