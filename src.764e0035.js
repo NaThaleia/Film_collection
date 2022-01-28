@@ -18,7 +18,9 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 "use strict";function e(e){console.log(`click on TeamModal ${e.target}`)}Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=e;
 },{}],"LPK7":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=u;var e=l(require("../listeners/onHome")),r=l(require("../listeners/onLibrary")),t=l(require("../listeners/onSearchMovie")),n=l(require("../listeners/onHero")),i=l(require("../listeners/onWatched")),o=l(require("../listeners/onQueue")),s=l(require("../listeners/onTeamModal"));function l(e){return e&&e.__esModule?e:{default:e}}function u(t){const{home:i,library:o,searchMovie:s,hero:l,watched:u,queue:a,nIceTeam:d}=t;i.addEventListener("click",e.default),o.addEventListener("click",r.default),l.addEventListener("click",n.default),console.log("Hello World")}
-},{"../listeners/onHome":"jOiQ","../listeners/onLibrary":"ljQW","../listeners/onSearchMovie":"WT8E","../listeners/onHero":"lk7g","../listeners/onWatched":"DFB4","../listeners/onQueue":"lZV9","../listeners/onTeamModal":"Iz5z"}],"Focm":[function(require,module,exports) {
-"use strict";require("./sass/main.scss");var e=require("./js/base/refs"),s=r(require("./js/base/eventListeners"));function r(e){return e&&e.__esModule?e:{default:e}}function u(){(0,s.default)(e.refs)}u();
-},{"./sass/main.scss":"clu1","./js/base/refs":"rzWj","./js/base/eventListeners":"LPK7"}]},{},["Focm"], null)
-//# sourceMappingURL=/Film_collection/src.f58ab828.js.map
+},{"../listeners/onHome":"jOiQ","../listeners/onLibrary":"ljQW","../listeners/onSearchMovie":"WT8E","../listeners/onHero":"lk7g","../listeners/onWatched":"DFB4","../listeners/onQueue":"lZV9","../listeners/onTeamModal":"Iz5z"}],"QU1Y":[function(require,module,exports) {
+"use strict";function e(){return fetch("https://api.themoviedb.org/3/trending/all/day?api_key=e2b1fd67e69bae9f083d3c611e2b6f41").then(e=>e.json())}Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=e;
+},{}],"Focm":[function(require,module,exports) {
+"use strict";require("./sass/main.scss");var e=require("./js/base/refs"),s=u(require("./js/base/eventListeners")),r=u(require("./js/base/request"));function u(e){return e&&e.__esModule?e:{default:e}}function t(){(0,s.default)(e.refs)}t(),(0,r.default)().then(e=>console.log(e));
+},{"./sass/main.scss":"clu1","./js/base/refs":"rzWj","./js/base/eventListeners":"LPK7","./js/base/request":"QU1Y"}]},{},["Focm"], null)
+//# sourceMappingURL=/Film_collection/src.764e0035.js.map
