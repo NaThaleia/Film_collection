@@ -12,5 +12,13 @@ export default function onSearchMovie(e) {
   }
   refs.hero.innerHTML = '';
 
-  fetchApiSearch(query).then(renderCardsHero);
+  fetchApiSearch(query)
+    .then(data => {
+      renderCardsHero(data.results);
+      return data;
+    })
+    .then(data => {
+      e.target.reset();
+      return data;
+    });
 }
