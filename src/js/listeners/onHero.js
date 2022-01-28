@@ -1,4 +1,4 @@
-export default function onWatched(evt) {
+export default function onHero(evt) {
   console.log(`click on Hero ${evt}`);
   return
 }
