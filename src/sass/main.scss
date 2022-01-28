@@ -3,14 +3,14 @@
  * Все паршалы подключаются сюда.
  */
 
-@import './base/common';
-@import './components/container';
-@import './layout/footer';
-@import './layout/header';
-@import './layout/hero';
-@import './layout/pagination';
-@import './layout/search-modal';
-@import './layout/team-modal';
 @import './utils/cubic';
 @import './utils/mixins';
 @import './utils/variables';
+@import './base/common';
+@import './components/container';
+@import './layout/header';
+@import './layout/hero';
+@import './layout/footer';
+@import './layout/pagination';
+@import './layout/search-modal';
+@import './layout/team-modal';
