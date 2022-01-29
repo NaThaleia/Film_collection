@@ -4,7 +4,7 @@ export const refs = {
   searchMovie: document.querySelector('.search-film-form'),
   // watched: document.querySelector('.watched'),
   // queue: document.querySelector('.queue'),
-  hero: document.querySelector('.hero'),
+  hero: document.getElementById('filmList'),
   // nIceTeam: document.querySelector('.team-modal-btn'),
 
   // addToWatch: document.querySelector('.addToWatch'),

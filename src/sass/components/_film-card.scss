@@ -1,0 +1,56 @@
+.filmCard {
+  max-width: 274px;
+
+  &__action {
+    display: block;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    text-align: left;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__image {
+    border-radius: 5px;
+  }
+
+  &__description {
+    padding-top: 10px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 3px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &__details {
+    display: flex;
+  }
+
+  &__сategory {
+    color: #ff6b08;
+  }
+
+  &__rating {
+    margin-left: 11px;
+    width: 36px;
+    height: 16px;
+    background-color: #ff6b08;
+    color: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 14px;
+  }
+}

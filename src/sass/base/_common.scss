@@ -4,6 +4,9 @@ body {
   font-size: 12px;
   line-height: 1.33;
   color: $primary-color;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 html {
