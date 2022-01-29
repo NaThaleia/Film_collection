@@ -5,9 +5,10 @@ import onHero from '../listeners/onHero';
 import onWatched from '../listeners/onWatched';
 import onQueue from '../listeners/onQueue';
 import onTeamModal from '../listeners/onTeamModal';
+import onCloseModal from '../listeners/onCloseModal';
 
 export default function eventListeners(refs) {
-  const { home, library, searchMovie, hero, watched, queue, nIceTeam } = refs;
+  const { home, library, searchMovie, hero, watched, queue, nIceTeam, modalClose } = refs;
   home.addEventListener('click', onHome);
   library.addEventListener('click', onLibrary);
   searchMovie.addEventListener('submit', onSearchMovie);
@@ -16,5 +17,6 @@ export default function eventListeners(refs) {
   //   queue.addEventListener('click', onQueue);
   hero.addEventListener('click', onHero);
   //   nIceTeam.addEventListener('click', onTeamModal);
+  modalClose.addEventListener('click', onCloseModal);
   console.log('Hello World');
 }
