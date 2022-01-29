@@ -7,6 +7,7 @@ import onQueue from '../listeners/onQueue';
 import onTeamModal from '../listeners/onTeamModal';
 import onCloseModal from '../listeners/onCloseModal';
 import onBackdropClick from '../listeners/onBackdropClick';
+import onModalEscKeyPress from '../listeners/onModalEscKeyPress';
 
 export default function eventListeners(refs) {
   const { home, library, searchMovie, hero, watched, queue, nIceTeam, modalClose, modalSearch } = refs;
@@ -20,5 +21,6 @@ export default function eventListeners(refs) {
   //   nIceTeam.addEventListener('click', onTeamModal);
   modalClose.addEventListener('click', onCloseModal);
   modalSearch.addEventListener('click', onBackdropClick);
+  window.addEventListener('keydown', onModalEscKeyPress);
   console.log('Hello World');
 }
