@@ -16,3 +16,4 @@ export default function renderPagination(maxPage, currentPage) {
 
   refs.paginationAll.insertAdjacentHTML('beforeend', arrPage.join(''));
 }
+
