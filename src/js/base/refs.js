@@ -9,6 +9,9 @@ export const refs = {
   watched: document.querySelector('.watched'),
   queue: document.querySelector('.queue'),
   hero: document.getElementById('filmList'),
+  pagination: document.querySelector('.pagination__container'),
+  paginationAll: document.querySelector('.all-page'),
+  paginationLast: document.querySelector('.last-page'),
   // nIceTeam: document.querySelector('.team-modal-btn'),
 
   // addToWatch: document.querySelector('.addToWatch'),
