@@ -11,5 +11,6 @@ export const refs = {
   // addToWatch: document.querySelector('.addToWatch'),
   // addToQueue: document.querySelector('addToQueue'),
   modalClose: document.querySelector('.modal-close'),
+  modalSearch: document.querySelector('.backdrop-modal-form'),
 };
 
