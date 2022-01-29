@@ -2,6 +2,7 @@ export const refs = {
   header: document.querySelector('.header'),
   home: document.querySelector('.home'),
   library: document.querySelector('.library'),
+  libraryNavigation: document.querySelector('.library-navigation'),
   searchMovie: document.querySelector('.search-film-form'),
   // watched: document.querySelector('.watched'),
   // queue: document.querySelector('.queue'),
