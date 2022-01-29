@@ -5,6 +5,7 @@ import onHero from '../listeners/onHero';
 import onWatched from '../listeners/onWatched';
 import onQueue from '../listeners/onQueue';
 import onTeamModal from '../listeners/onTeamModal';
+import onOpenModal from '../listeners/onOpenModal';
 import onCloseModal from '../listeners/onCloseModal';
 import onBackdropClick from '../listeners/onBackdropClick';
 import onModalEscKeyPress from '../listeners/onModalEscKeyPress';
