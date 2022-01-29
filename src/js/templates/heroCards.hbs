@@ -7,13 +7,12 @@
 {{/each}} --}}
 
 {{#each this}}
-  <li class='filmCard'>
+  <li class='filmCard' data-id='{{id}}'>
     <button type='button' class='filmCard__action'>
       <img
         class='filmCard__image'
         src='https://image.tmdb.org/t/p/w500{{poster_path}}'
         alt='movie {{original_title}}'
-        data-id='{{id}}'
         width='274'
         height='411'
       />

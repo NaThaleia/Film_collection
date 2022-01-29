@@ -1,6 +1,7 @@
 import { refs } from '../base/refs';
 import fetchApiSearch from '../fetch/fetchApiSearch';
 import renderCardsHero from '../base/renderCardsHero';
+import renderPagination from '../base/renderPagination';
 
 export default function onSearchMovie(e) {
   e.preventDefault();
@@ -23,9 +24,15 @@ export default function onSearchMovie(e) {
       return data;
     })
     .then(data => {
+      console.log(data);
+      renderPagination(data.total_pages, data.page);
+      return data;
+    })
+    .then(data => {
       e.target.reset();
       return data;
     })
+
     .catch(data => {
       console.log(data);
       return data;
