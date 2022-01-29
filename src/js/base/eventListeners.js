@@ -10,13 +10,14 @@ import onBackdropClick from '../listeners/onBackdropClick';
 import onModalEscKeyPress from '../listeners/onModalEscKeyPress';
 
 export default function eventListeners(refs) {
-  const { home, library, searchMovie, hero, watched, queue, nIceTeam, modalClose, modalSearch } = refs;
+  const { home, headerLogo, library, searchMovie, hero, watched, queue, nIceTeam, modalClose, modalSearch } = refs;
   home.addEventListener('click', onHome);
+  headerLogo.addEventListener('click', onHome);
   library.addEventListener('click', onLibrary);
   searchMovie.addEventListener('submit', onSearchMovie);
   // hero.addEventListener('click', onHero);
-  //   watched.addEventListener('click', onWatched);
-  //   queue.addEventListener('click', onQueue);
+  watched.addEventListener('click', onWatched);
+  queue.addEventListener('click', onQueue);
   hero.addEventListener('click', onHero);
   //   nIceTeam.addEventListener('click', onTeamModal);
   modalClose.addEventListener('click', onCloseModal);
