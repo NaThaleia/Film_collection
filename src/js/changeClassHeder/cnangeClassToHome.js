@@ -14,4 +14,10 @@ export default function onHomeChangeClass(evt) {
     refs.header.classList.remove('header_imageLibrery');
     console.log(`add class`);
   }
+
+  if (refs.searchMovie.classList.contains('is-hidden')) {
+    refs.libraryNavigation.classList.add('is-hidden');
+    refs.searchMovie.classList.remove('is-hidden');
+    console.log(`add class`);
+  }
 }
