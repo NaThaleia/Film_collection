@@ -24,11 +24,17 @@
 .header {
   height: 230px;
   background-color: rgba(0, 0, 0, 0.56);
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-    url(../images/rectangle2-min.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.header_imageHome {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+    url(../images/rectangle2-min.jpg);
+}
+.header_imageLibrery {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+    url(../images/rectangle1-min.jpg);
 }
 .header__container {
   width: 100%;
@@ -100,9 +106,13 @@
 .current::after {
   opacity: 1;
 }
-.header__navListLink:hover {
+
+.current {
   border-bottom: 3px solid #ff6b08;
 }
+// .header__navListLink:hover {
+//   border-bottom: 3px solid #ff6b08;
+// }
 
 .header__navList > li:first-child {
   margin-right: 3rem;
