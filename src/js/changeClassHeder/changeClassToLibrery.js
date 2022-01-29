@@ -19,5 +19,7 @@ export default function onLibraryChangeClass(evt) {
         refs.libraryNavigation.classList.remove("is-hidden")
         console.log(`add class`);
     }
+
+    refs.searchErrors.classList.add('is-hidden'); //временная затычка, убирает плохо найденное кино
 }
 
