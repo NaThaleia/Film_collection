@@ -35,7 +35,7 @@ var e,t=arguments[3];!function(t,r){"object"==typeof exports&&"object"==typeof m
 },{"../base/refs":"rzWj","../listeners/onCloseModal":"Av4p"}],"sDS0":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=s;var e=require("../base/refs"),o=r(require("../listeners/onModalEscKeyPress"));function r(e){return e&&e.__esModule?e:{default:e}}function s(){console.log("Открываем модалку"),e.refs.modalSearch.classList.remove("is-hidden-modal-form"),window.addEventListener("keydown",o.default),document.body.style.overflow="hidden"}
 },{"../base/refs":"rzWj","../listeners/onModalEscKeyPress":"JTfQ"}],"lk7g":[function(require,module,exports) {
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=r;var e=t(require("../listeners/onOpenModal"));function t(e){return e&&e.__esModule?e:{default:e}}function r(t){console.dir(t),(0,e.default)()}
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=r;var e=t(require("../listeners/onOpenModal"));function t(e){return e&&e.__esModule?e:{default:e}}function r(t){t.preventDefault(),console.dir(t.target.parentElement.className);t.target.closest(".filmCard");"hero"===t.target.parentElement.className||(0,e.default)()}
 },{"../listeners/onOpenModal":"sDS0"}],"DFB4":[function(require,module,exports) {
 "use strict";function e(e){console.log(`click on Watched ${e.target}`)}Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=e;
 },{}],"lZV9":[function(require,module,exports) {
@@ -49,4 +49,4 @@ var e,t=arguments[3];!function(t,r){"object"==typeof exports&&"object"==typeof m
 },{"../listeners/onHome":"jOiQ","../listeners/onLibrary":"ljQW","../listeners/onSearchMovie":"WT8E","../listeners/onHero":"lk7g","../listeners/onWatched":"DFB4","../listeners/onQueue":"lZV9","../listeners/onTeamModal":"Iz5z","../listeners/onOpenModal":"sDS0","../listeners/onCloseModal":"Av4p","../listeners/onBackdropClick":"N111","../listeners/onModalEscKeyPress":"JTfQ"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss");var e=require("./js/base/refs"),s=u(require("./js/base/eventListeners")),r=u(require("./js/base/firstPageLoading"));function u(e){return e&&e.__esModule?e:{default:e}}function a(){(0,r.default)(),(0,s.default)(e.refs)}a();
 },{"./sass/main.scss":"clu1","./js/base/refs":"rzWj","./js/base/eventListeners":"LPK7","./js/base/firstPageLoading":"zvhS"}]},{},["Focm"], null)
-//# sourceMappingURL=/Film_collection/src.6008797d.js.map
+//# sourceMappingURL=/Film_collection/src.dcd38b3c.js.map
