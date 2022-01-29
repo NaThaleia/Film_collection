@@ -1,11 +1,11 @@
 import './sass/main.scss';
 import { refs } from './js/base/refs';
 import eventListener from './js/base/eventListeners';
-import firstPageLoading from './js/base/firstPageLoading';
+import pageLoading from './js/base/pageLoading';
 // import request from './js/base/request';
 
 function start() {
-  firstPageLoading();
+  pageLoading();
   eventListener(refs);
 }
 
