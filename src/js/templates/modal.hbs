@@ -1,6 +1,6 @@
 <div class="modal-form">
-<img src='https://image.tmdb.org/t/p/w500{{poster_path}}' alt="фильм" class="modal-foto-film" />
-    <div class="modal-info-film">
+  <img src='https://image.tmdb.org/t/p/w500{{poster_path}}' alt="фильм" class="modal-foto-film" />
+  <div class="modal-info-film">
       <h3 class="modal-title">{{original_title}}</h3>
       <table class="modal-table">
         <tr>
@@ -22,13 +22,12 @@
       </table>
       <p class="modal-about">About</p>
       <p class="modal-text">{{overview}}</p>
-
       <div class="modal-btns">
-        <button class="modal-btn modal-btn-main">add to Watched</button>
-        <button class="modal-btn">add to queue</button>
+        <button class="modal-btn modal-btn-main watch">add to Watched</button>
+        <button class="modal-btn queue">add to queue</button>
       </div>
-    <button type="button" class="modal-close"> 
-      <i class="fas fa-times"></i>
-    </button>
-    </div>
+  </div>
+  <button type="button" class="modal-close">
+    <i class="fas fa-times"></i>
+  </button>   
 </div>
