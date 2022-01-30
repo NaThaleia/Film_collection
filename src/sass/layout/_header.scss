@@ -141,7 +141,7 @@
   color: #555;
   outline: none;
   background: none;
-  padding: 1px;
+  // padding: 1px;
   width: 100%;
   max-width: 100%;
   font-weight: normal;
@@ -150,7 +150,6 @@
   color: #ffffff;
   border: none;
   border-bottom: 0.5px solid #ffffff;
-  text-align: center;
 
   &::placeholder {
     text-align: left;
@@ -204,8 +203,8 @@
   }
 }
 
-.watched-btn,
-.queue-btn {
+.watched-btn-header,
+.queue-btn-header {
   width: 136px;
   height: 44px;
   border-radius: 5px;
