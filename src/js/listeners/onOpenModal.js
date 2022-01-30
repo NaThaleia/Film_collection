@@ -1,6 +1,6 @@
 import { refs } from "../base/refs";
 import onModalEscKeyPress from '../listeners/onModalEscKeyPress';
-// import onCloseModal from '../listeners/onCloseModal';
+import onCloseModal from '../listeners/onCloseModal';
 
 export default function onOpenModal(e) {
     console.log('Открываем модалку');
@@ -8,9 +8,8 @@ export default function onOpenModal(e) {
     window.addEventListener('keydown', onModalEscKeyPress);
     document.body.style.overflow = "hidden";
    
-    console.log(e);
-    // const cross = e.target.closest('.modal-close');
-    // console.log(cross);
+    const modalClose = document.querySelector('.modal-close');
+    modalClose.addEventListener('click', onCloseModal);
    
     return;
 }
