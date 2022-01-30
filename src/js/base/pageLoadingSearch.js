@@ -13,6 +13,7 @@ export default function pageLoadingSearch(query, page = 1) {
         // return data;
       }
       renderCardsHero(data.results);
+      localStorage.setItem('cards', JSON.stringify(data.results));
       return data;
     })
     .then(data => {
