@@ -22,4 +22,5 @@ export const refs = {
 
   // modalClose: document.querySelector('.modal-close'),
   modalSearch: document.querySelector('.backdrop-modal-form'),
+  SearchOnHeader: document.querySelector('.some-input'),
 };
