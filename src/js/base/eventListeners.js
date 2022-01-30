@@ -30,8 +30,8 @@ export default function eventListeners(refs) {
   library.addEventListener('click', onLibrary);
   searchMovie.addEventListener('submit', onSearchMovie);
   // hero.addEventListener('click', onHero);
-  watched.addEventListener('click', onWatched);
-  queue.addEventListener('click', onQueue);
+  // watched.addEventListener('click', onWatched);
+  // queue.addEventListener('click', onQueue);
   hero.addEventListener('click', onHero);
   nIceTeam.addEventListener('click', onTeamModal);
   // modalClose.addEventListener('click', onCloseModal);
