@@ -4,16 +4,18 @@ import { refs } from '../base/refs';
 
 export default function onHero(e) {
   e.preventDefault();
-  console.log(e.target);
-  if (e.target.className === 'hero') return; // Мимо
-  const myCardId = e.target.parentElement.parentElement.dataset.id; // куда клик
-  console.log(myCardId);
+
+  if (e.target.className === 'hero' || e.target.nodeName === 'UL') return; // Мимо
+  const target = e.target.closest('.filmCard');
+
+  const myCardId = target.dataset.id; // куда клик
+
   const myCard = JSON.parse(localStorage
     .getItem("cards"))
     .find(el => el.id == myCardId);
-  const modalMarkup = modal(myCard);
-  console.log(myCard);
-  refs.modalSearch.innerHTML = modalMarkup;
+  
+  const modalMarkup = modal(myCard); // создаём макет
+  refs.modalSearch.innerHTML = modalMarkup; // пихаем в дом
 
   onOpenModal();
   return;
