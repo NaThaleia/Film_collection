@@ -2,12 +2,9 @@ import { refs } from './refs';
 import CardsHero from '../templates/heroCards.hbs';
 
 export default function renderCardsHero(arr) {
-  const arrNewYear = NewYear(arr);
-
-  const cards = CardsHero(arrNewYear);
-
-  /* ДОДЕЛАТЬ ШАБЛОНИЗАТОР НА КОРОТКУЮ ДАТУ */
-  /* СДЕЛАТЬ ФУНКЦИЮ НА ПЕРЕКОДИРОВУ ЖАНРОВ */
+  const arrNewYear = NewYear(arr); // в исходном массиве с fetch  меняем год и передаем дальше
+  const arrNewGenres = NewGenres(arrNewYear); // в исходном массиве с fetch  меняем жанр и передаем дальше
+  const cards = CardsHero(arrNewGenres);
 
   refs.hero.insertAdjacentHTML('beforeend', cards);
 }
@@ -18,4 +15,32 @@ function NewYear(arr) {
     const release_date = e.release_date.slice(0, 4);
     return { ...e, release_date: release_date };
   });
+}
+
+function NewGenres(arr) {
+  const arrGenresLs = JSON.parse(localStorage.getItem('genres'));
+
+  const arrGenres = arr
+    .map(e => {
+      return {
+        ...e,
+        genre_ids: e.genre_ids
+          .map(x => {
+            return arrGenresLs.find(({ id }) => id == x);
+          })
+          .map(({ name }) => name),
+      };
+    })
+    .map(e => {
+      if (e.genre_ids.length < 4) {
+        const genre_idsSmall = e.genre_ids.join(' ');
+        return { ...e, genre_ids: genre_idsSmall };
+      }
+
+      const genre_idsBig = e.genre_ids.slice(0, 2);
+      genre_idsBig.push('Other');
+      return { ...e, genre_ids: genre_idsBig.join(' ') };
+    });
+
+  return arrGenres;
 }
