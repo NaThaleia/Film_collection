@@ -4,6 +4,9 @@ import CardsHero from '../templates/heroCards.hbs';
 export default function renderCardsHero(arr) {
   const arrNewYear = NewYear(arr); // в исходном массиве с fetch  меняем год и передаем дальше
   const arrNewGenres = NewGenres(arrNewYear); // в исходном массиве с fetch  меняем жанр и передаем дальше
+
+  localStorage.setItem('cards', JSON.stringify(arrNewGenres));
+
   const cards = CardsHero(arrNewGenres);
 
   refs.hero.insertAdjacentHTML('beforeend', cards);
@@ -33,13 +36,13 @@ function NewGenres(arr) {
     })
     .map(e => {
       if (e.genre_ids.length < 4) {
-        const genre_idsSmall = e.genre_ids.join(' ');
+        const genre_idsSmall = e.genre_ids.join(', ');
         return { ...e, genre_ids: genre_idsSmall };
       }
 
       const genre_idsBig = e.genre_ids.slice(0, 2);
       genre_idsBig.push('Other');
-      return { ...e, genre_ids: genre_idsBig.join(' ') };
+      return { ...e, genre_ids: genre_idsBig.join(', ') };
     });
 
   return arrGenres;
