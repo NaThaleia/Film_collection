@@ -93,7 +93,6 @@
     background-color: #ff6b08;
     border-radius: 2px;
   }
-  // border-bottom: 3px solid #ff6b08;
 }
 // .header__navListLink:hover {
 //   border-bottom: 3px solid #ff6b08;
@@ -109,13 +108,7 @@
 .header__navList > li:first-child {
   margin-right: 1rem;
 }
-.library-navigation {
-  text-align: center;
 
-  @media screen and (max-width: 767px) {
-    display: flex;
-  }
-}
 .search-film-form {
   // width: 35%;
 
@@ -198,13 +191,15 @@
   transform: translate(-50%, -50%);
   top: 65%;
   left: 48%;
-
+  @media screen and (min-width: 768px) {
+    top: 65%;
+    left: 50%;
+  }
   @media screen and (max-width: 767px) {
     display: flex;
   }
 }
-.library-navigation {
-}
+
 .watched-btn,
 .queue-btn {
   width: 136px;
