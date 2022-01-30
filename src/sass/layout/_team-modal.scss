@@ -9,7 +9,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: $main-color;
+  // для светлой темы
+  // background: $main-color;
+  background: rgba(0, 0, 0, 0.8);
   transform: translate(-50%, -50%);
   overflow: auto;
 }
@@ -29,9 +31,13 @@
   width: 30px;
   border: none;
   cursor: pointer;
-  background-color: $main-color;
+  // для светлой темы
+  // background: $main-color;
+  background: rgba(0, 0, 0, 0.8);
   transition: color 0.5s cubic-bezier(0.8, 0.4, 0.3, 0.9);
-  color: $primary-color;
+  color: $secondary-color;
+  // для светлой темы
+  // color: $primary-color;
 
   &:focus,
   &:hover {
@@ -114,7 +120,9 @@
   font-weight: 400;
   line-height: 1.17;
   margin-bottom: 12px;
-  color: $primary-color;
+  // для светлой темы
+  // color: $primary-color;
+  color: $secondary-color;
   font-size: 14px;
   @media screen and (min-width: 768px) {
     font-weight: 500;
