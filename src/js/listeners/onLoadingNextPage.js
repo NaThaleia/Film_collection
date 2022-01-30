@@ -1,9 +1,10 @@
 import { refs } from '../base/refs';
 import pageLoading from '../base/pageLoading';
+import pageLoadingSearch from '../base/pageLoadingSearch';
 
 export default function onLoadingNextPage(e) {
   let nextPage = e.target.dataset.page;
-  let currentPage = localStorage.getItem('page');
+  let currentPage = JSON.parse(localStorage.getItem('page'));
 
   if (!nextPage) {
     console.log('error');
@@ -12,11 +13,17 @@ export default function onLoadingNextPage(e) {
 
   refs.hero.innerHTML = '';
   if (nextPage === 'Previos') {
-    nextPage = parseInt(currentPage) - 1;
+    nextPage = parseInt(currentPage.page) - 1;
   }
   if (nextPage === 'Next') {
-    nextPage = parseInt(currentPage) + 1;
+    nextPage = parseInt(currentPage.page) + 1;
   }
 
-  pageLoading(parseInt(nextPage));
+  if (currentPage.fetch === 'Week') {
+    pageLoading(parseInt(nextPage));
+  }
+
+  if (currentPage.fetch === 'Search') {
+    pageLoadingSearch(currentPage.query, parseInt(nextPage));
+  }
 }
