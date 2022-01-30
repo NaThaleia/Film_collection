@@ -107,3 +107,8 @@
 //   color: #ffffff;
 //   border-radius: 5px;
 // }
+
+.is-disabled {
+  pointer-events: none;
+  background-color: #c4c0c0;
+}
