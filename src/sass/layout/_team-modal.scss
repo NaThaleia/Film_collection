@@ -33,7 +33,8 @@
   cursor: pointer;
   // для светлой темы
   // background: $main-color;
-  background: rgba(0, 0, 0, 0.8);
+  background-color: transparent;
+
   transition: color 0.5s cubic-bezier(0.8, 0.4, 0.3, 0.9);
   color: $secondary-color;
   // для светлой темы
