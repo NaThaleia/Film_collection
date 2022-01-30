@@ -9,7 +9,8 @@ export default function onCloseModal() {
     const modalQueue = document.querySelector('.modal-queue');
     modalWatched.removeEventListener('click', onModalWatched);
     modalQueue.removeEventListener('click', onModalQueue);
-
+    const modalClose = document.querySelector('.modal-close');
+    modalClose.removeEventListener('click', onCloseModal);
     refs.modalSearch.classList.add('is-hidden-modal-form');
     window.removeEventListener('keydown', onModalEscKeyPress);
 
