@@ -15,7 +15,7 @@ export const refs = {
   paginationAll: document.querySelector('.all-pages'),
   paginationLast: document.querySelector('.last-page'),
   paginationNext: document.querySelector('.arrow_right'),
-  // nIceTeam: document.querySelector('.team-modal-btn'),
+  nIceTeam: document.querySelector('.team-modal-btn'),
 
   // addToWatch: document.querySelector('.addToWatch'),
   // addToQueue: document.querySelector('addToQueue'),
