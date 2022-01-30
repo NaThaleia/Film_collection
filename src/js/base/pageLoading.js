@@ -11,6 +11,7 @@ export default function pageLoading(page = 1) {
     })
     .then(data => {
       renderPagination(data.total_pages, data.page);
+      localStorage.setItem('page', `${data.page}`);
       return data;
     });
 }
