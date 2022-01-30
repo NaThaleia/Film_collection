@@ -11,6 +11,7 @@ export const refs = {
   hero: document.getElementById('filmList'),
   pagination: document.querySelector('.pagination__container'),
   paginationPrevious: document.querySelector('.arrow_left'),
+  paginationFirst: document.querySelector('.first-page'),
   paginationAll: document.querySelector('.all-pages'),
   paginationLast: document.querySelector('.last-page'),
   paginationNext: document.querySelector('.arrow_right'),

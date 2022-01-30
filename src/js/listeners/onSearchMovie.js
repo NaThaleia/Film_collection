@@ -24,8 +24,8 @@ export default function onSearchMovie(e) {
       return data;
     })
     .then(data => {
-      console.log(data);
       renderPagination(data.total_pages, data.page);
+      localStorage.setItem('page', `${data.page}`);
       return data;
     })
     .then(data => {
@@ -34,7 +34,6 @@ export default function onSearchMovie(e) {
     })
 
     .catch(data => {
-      console.log(data);
       return data;
     });
 }
