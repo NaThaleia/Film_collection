@@ -4,6 +4,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
 }
 .header_imageHome {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
@@ -193,25 +194,16 @@
 }
 .library-navigation {
   text-align: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 65%;
+  left: 48%;
 
   @media screen and (max-width: 767px) {
     display: flex;
   }
 }
 .library-navigation {
-  position: absolute;
-  left: 3%;
-  top: 135px;
-
-  @media screen and (min-width: 768px) {
-    top: 135px;
-    left: 32%;
-  }
-
-  @media screen and (min-width: 1024px) {
-    top: 135px;
-    left: 36%;
-  }
 }
 .watched-btn,
 .queue-btn {
