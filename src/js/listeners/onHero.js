@@ -4,7 +4,7 @@ import { refs } from '../base/refs';
 
 export default function onHero(e) {
   e.preventDefault();
-
+  console.log(e.target);
   if (e.target.className === 'hero') return; // Мимо
   const myCardId = e.target.parentElement.parentElement.dataset.id; // куда клик
   console.log(myCardId);

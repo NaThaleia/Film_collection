@@ -8,7 +8,6 @@ export default function pageLoading(page = 1) {
     .then(data => {
       renderCardsHero(data.results);
       localStorage.setItem("cards", JSON.stringify(data.results));
-      console.log(localStorage.getItem('cards'));
       return data;
     })
     .then(data => {
