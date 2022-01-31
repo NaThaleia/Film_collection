@@ -2,8 +2,8 @@ import { refs } from './refs';
 
 export default function renderPagination(maxPage, currentPage) {
   refs.pagination.classList.remove('hidden');
-  // console.log('maxPage', maxPage);
-  // console.log('currentPage', currentPage);
+  // console.log(maxPage);
+  // console.log(currentPage);
 
   /* очиска классов */
   refs.pagination.classList.remove('is-hidden');

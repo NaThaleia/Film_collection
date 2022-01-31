@@ -1,12 +1,11 @@
-import { refs } from '../base/refs';
+import { refs } from "../base/refs";
 import onModalEscKeyPress from './onModalEscKeyPress';
-import onBackdropClick from './onBackdropClick';
-import onModalWatched from './onModalWatched';
-import onModalQueue from './onModalQueue';
+import onBackdropClick from "./onBackdropClick";
+import onModalWatched from "./onModalWatched";
+import onModalQueue from "./onModalQueue";
 
-export default function onCloseModal(modalRefs) {
+export default function onCloseModal() {
   console.log('Закрыть модалку');
-
   const modalWatched = document.querySelector('.modal-watched');
   const modalQueue = document.querySelector('.modal-queue');
   const modalClose = document.querySelector('.modal-close');
@@ -17,6 +16,6 @@ export default function onCloseModal(modalRefs) {
   refs.modalSearch.classList.add('is-hidden-modal-form');
   window.removeEventListener('keydown', onModalEscKeyPress);
   refs.modalSearch.removeEventListener('click', onBackdropClick);
-  document.body.style.overflow = '';
+  document.body.style.overflow = "";
   return;
 }
