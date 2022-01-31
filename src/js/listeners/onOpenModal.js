@@ -15,9 +15,9 @@ export default function onOpenModal(myCard) {
         modalQueue: document.querySelector('.modal-queue'),
         modalClose: document.querySelector('.modal-close')
     }
-    refs.modalSearch.addEventListener('click', (evt) => onBackdropClick(evt, modalRefs));
+    refs.modalSearch.addEventListener('click', onBackdropClick);
     refs.modalSearch.classList.remove('is-hidden-modal-form');
-    window.addEventListener('keydown', (evt) => onModalEscKeyPress(evt, modalRefs));
+    window.addEventListener('keydown', onModalEscKeyPress);
     document.body.style.overflow = "hidden";
 
     watchedCheck(myCard.id, modalRefs);
