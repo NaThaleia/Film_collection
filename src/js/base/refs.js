@@ -16,7 +16,5 @@ export const refs = {
   paginationLast: document.querySelector('.last-page'),
   paginationNext: document.querySelector('.arrow_right'),
   nIceTeam: document.querySelector('.team-modal-btn'),
-
-  // modalClose: document.querySelector('.modal-close'),
   modalSearch: document.querySelector('.backdrop-modal-form'),
 };
