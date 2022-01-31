@@ -9,7 +9,7 @@ import onCloseModal from './onCloseModal';
 
 export default function onOpenModal(myCard) {
     console.log('Открываем модалку');
-
+    
     const modalRefs = {
         modalWatched: document.querySelector('.modal-watched'),
         modalQueue: document.querySelector('.modal-queue'),
@@ -22,7 +22,7 @@ export default function onOpenModal(myCard) {
 
     watchedCheck(myCard.id, modalRefs);
     queueCheck(myCard.id, modalRefs);
-
+    
     modalRefs.modalWatched.addEventListener('click', () => onModalWatched(myCard, modalRefs));
     modalRefs.modalQueue.addEventListener('click', () => onModalQueue(myCard, modalRefs));
     modalRefs.modalClose.addEventListener('click', () => onCloseModal(modalRefs));
