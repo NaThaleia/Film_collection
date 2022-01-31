@@ -16,6 +16,6 @@ export default function onCloseModal() {
     refs.modalSearch.classList.add('is-hidden-modal-form');
     window.removeEventListener('keydown', onModalEscKeyPress);
     refs.modalSearch.removeEventListener('click', onBackdropClick);
-    document.body.style.overflow = ""; 
+    document.body.style.overflow = "";
     return;
 }
