@@ -1,5 +1,5 @@
 import { refs } from "../base/refs";
-import onModalEscKeyPress from '../listeners/onModalEscKeyPress';
+import onModalEscKeyPress from './onModalEscKeyPress';
 import onModalWatched from "./onModalWatched";
 import onModalQueue from "./onModalQueue";
 

@@ -1,4 +1,4 @@
-import onOpenModal from '../listeners/onOpenModal';
+import onOpenModal from './onOpenModal';
 import modal from '../templates/modal.hbs';
 import { refs } from '../base/refs';
 
