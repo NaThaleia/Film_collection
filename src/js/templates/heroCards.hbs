@@ -1,28 +1,19 @@
-{{!-- {{#each this}}
-  <div>
-    <img src='https://image.tmdb.org/t/p/w500/{{poster_path}}' alt='{{title}}' width='250;' />
-    <h2>{{title}}</h2>
-    <p>{{genre_name}} <span>{{release_date}}</span></p>
-  </div>
-{{/each}} --}}
-
 {{#each this}}
-  <li class='filmCard' data-id='{{id}}'>
-    <button type='button' class='filmCard__action'>
-      <img
-        class='filmCard__image'
-        src='https://image.tmdb.org/t/p/w500{{poster_path}}'
-        alt='movie {{original_title}}'
-        width='274'
-        height='411'
-      />
-      <div class='filmCard__description'>
-        <p class='filmCard__title' title='{{original_title}}'>{{original_title}}</p>
-        <div class='filmCard__details'>
-          <p class='filmCard__сategory'>{{genre_name}} | <span>{{release_date}}</span> </p>
-          <p class='filmCard__rating'>{{vote_average}}</p>
-        </div>
+  <li class='filmCard filmCard__action' data-id='{{id}}'>
+    <img
+      class='filmCard__image'
+      src='https://image.tmdb.org/t/p/w500{{poster_path}}'
+      alt='movie {{original_title}}'
+      width='274'
+      height='411'
+    />
+    <div class='filmCard__description'>
+      <p class='filmCard__title' title='{{original_title}}'>{{original_title}}</p>
+      <div class='filmCard__details'>
+        <p class='filmCard__сategory'>{{genre_ids}} | <span>{{release_date}}</span> </p>
+        <p class='filmCard__rating'>{{vote_average}}</p>
       </div>
-    </button>
+    </div>
+
   </li>
 {{/each}}

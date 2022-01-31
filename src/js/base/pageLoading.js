@@ -7,7 +7,7 @@ export default function pageLoading(page = 1) {
   fetchApiWeek(page)
     .then(data => {
       renderCardsHero(data.results);
-      localStorage.setItem("cards", JSON.stringify(data.results));
+      // localStorage.setItem("cards", JSON.stringify(data.results)); // перенесено в renderCardsHero, потому что там исходный массиф форматирует даты и жанры
       return data;
     })
     .then(data => {

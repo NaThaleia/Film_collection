@@ -2,8 +2,8 @@ import { refs } from './refs';
 
 export default function renderPagination(maxPage, currentPage) {
   refs.pagination.classList.remove('hidden');
-  // console.log(maxPage);
-  // console.log(currentPage);
+  // console.log('maxPage', maxPage);
+  // console.log('currentPage', currentPage);
 
   /* очиска классов */
   refs.pagination.classList.remove('is-hidden');
@@ -13,40 +13,36 @@ export default function renderPagination(maxPage, currentPage) {
   refs.paginationLast.classList.remove('active');
   refs.paginationLast.classList.remove('hidden');
 
+  /* данные для последней страници */
   refs.paginationLast.textContent = maxPage;
   refs.paginationLast.dataset.page = maxPage;
-  /* олварпв */
 
+  /* очистка промежуточных страниц, перед рендером */
   refs.paginationAll.innerHTML = '';
-  const arrPage = [];
+
+  const arrPage = []; // массив для промежуточных страниц
 
   const center = maxPage - 4;
 
   if (maxPage === 1) {
-    if (currentPage === 1) {
-      refs.paginationPrevious.classList.add('is-disabled');
-      refs.paginationFirst.classList.add('active');
-      refs.paginationNext.classList.add('is-disabled');
-      refs.paginationLast.classList.add('hidden');
-    }
+    openFirstPage();
+
+    refs.paginationNext.classList.add('is-disabled');
+    refs.paginationLast.classList.add('hidden');
   } else if (maxPage === 2) {
-    refs.paginationPrevious.classList.add('is-disabled');
-    refs.paginationFirst.classList.add('active');
+    openFirstPage();
+
     if (currentPage === maxPage) {
-      refs.paginationNext.classList.add('is-disabled');
-      refs.paginationLast.classList.add('active');
+      refs.paginationPrevious.classList.remove('is-disabled');
+      refs.paginationFirst.classList.remove('active');
+
+      openLastPage();
     }
   } else if (maxPage < 9) {
     if (currentPage === 1) {
-      refs.paginationPrevious.classList.add('is-disabled');
-      refs.paginationFirst.classList.add('active');
+      openFirstPage();
     }
 
-    if (currentPage === maxPage) {
-      refs.paginationNext.classList.add('is-disabled');
-      refs.paginationLast.classList.add('active');
-    }
-    // refs.paginationLast.classList.add('hidden');
     for (let i = 2; i < maxPage; i += 1) {
       if (i === currentPage) {
         arrPage.push(`<div class="page active" data-page="${i}">${i}</div>`);
@@ -54,17 +50,13 @@ export default function renderPagination(maxPage, currentPage) {
       }
       arrPage.push(`<div class="page" data-page="${i}">${i}</div>`);
     }
-  } else {
-    /* если больше 8 страниц */
-
-    if (currentPage === 1) {
-      refs.paginationPrevious.classList.add('is-disabled');
-      refs.paginationFirst.classList.add('active');
-    }
 
     if (currentPage === maxPage) {
-      refs.paginationNext.classList.add('is-disabled');
-      refs.paginationLast.classList.add('active');
+      openLastPage();
+    }
+  } else {
+    if (currentPage === 1) {
+      openFirstPage();
     }
 
     if (currentPage < 6) {
@@ -100,7 +92,21 @@ export default function renderPagination(maxPage, currentPage) {
         arrPage.push(`<div class="page" data-page="${i}">${i}</div>`);
       }
     }
+
+    if (currentPage === maxPage) {
+      openLastPage();
+    }
   }
 
   refs.paginationAll.insertAdjacentHTML('beforeend', arrPage.join(''));
+}
+
+function openFirstPage() {
+  refs.paginationPrevious.classList.add('is-disabled');
+  refs.paginationFirst.classList.add('active');
+}
+
+function openLastPage() {
+  refs.paginationNext.classList.add('is-disabled');
+  refs.paginationLast.classList.add('active');
 }

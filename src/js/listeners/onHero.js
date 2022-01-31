@@ -1,4 +1,4 @@
-import onOpenModal from '../listeners/onOpenModal';
+import onOpenModal from './onOpenModal';
 import modal from '../templates/modal.hbs';
 import { refs } from '../base/refs';
 
@@ -17,6 +17,6 @@ export default function onHero(e) {
   const modalMarkup = modal(myCard); // создаём макет
   refs.modalSearch.innerHTML = modalMarkup; // пихаем в дом
 
-  onOpenModal();
+  onOpenModal(myCard);
   return;
 }

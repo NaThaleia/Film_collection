@@ -5,7 +5,7 @@ import onHomeChangeClass from '../changeClassHeder/cnangeClassToHome';
 export default function onHome(evt) {
   refs.hero.innerHTML = '';
 
-  pageLoading(6);
+  pageLoading();
   onHomeChangeClass();
   console.log('я дома');
 }

@@ -50,8 +50,8 @@
   &:focus {
     text-decoration: none;
     color: $accent-color;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    box-shadow: 0 0 5px 4px rgba(255, 107, 8, 0.37);
+    transition: all 0.5s cubic-bezier(0.8, 0.4, 0.3, 0.9);
+    box-shadow: 0 0 5px 4px rgb(250 119 12 / 50%);
   }
 }
 

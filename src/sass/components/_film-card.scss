@@ -2,14 +2,19 @@
   max-width: 274px;
 
   &__action {
-    display: block;
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    text-align: left;
+    animation-name: slideUp;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    padding-bottom: 5px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 
-    &:hover {
+    &:hover,
+    :focus {
       cursor: pointer;
+      transform: scale(1.05);
+      background: #ff6b0844;
+      box-shadow: 0 0 20px 12px #ff6b0844;
+      border-radius: 5px;
     }
   }
 
