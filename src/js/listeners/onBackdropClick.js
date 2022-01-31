@@ -1,5 +1,5 @@
 import { refs } from "../base/refs";
-import onCloseModal from '../listeners/onCloseModal';
+import onCloseModal from './onCloseModal';
 
 export default function onBackdropClick(evt, modalRefs) {
     if (evt.currentTarget === evt.target) {

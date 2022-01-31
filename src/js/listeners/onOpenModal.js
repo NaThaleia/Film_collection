@@ -1,11 +1,11 @@
 import { refs } from "../base/refs";
 import { watchedCheck, queueCheck } from "../modal/buttonsCheck";
 
-import onModalEscKeyPress from '../listeners/onModalEscKeyPress';
+import onModalEscKeyPress from './onModalEscKeyPress';
 import onModalWatched from "./onModalWatched";
 import onBackdropClick from "./onBackdropClick";
 import onModalQueue from "./onModalQueue";
-import onCloseModal from '../listeners/onCloseModal';
+import onCloseModal from './onCloseModal';
 
 export default function onOpenModal(myCard) {
     console.log('Открываем модалку');

@@ -168,13 +168,17 @@
   @media screen and (min-width: 1024px) {
     width: 136px;
   }
+
+  &:focus,
+  &:hover {
+    background-color: #ff6b01;
+    color: #ffffff;
+    border: 1px solid #ff6b01;
+  }
 }
 
-.modal-btn-main {
+.modal-watched {
   margin-right: 15px;
-  background-color: #ff6b01;
-  color: #ffffff;
-  border: 1px solid #ff6b01;
 }
 
 .modal-close {
