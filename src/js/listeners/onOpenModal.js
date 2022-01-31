@@ -4,7 +4,7 @@ import onModalWatched from "./onModalWatched";
 import onModalQueue from "./onModalQueue";
 import onCloseModal from '../listeners/onCloseModal';
 
-export default function onOpenModal() {
+export default function onOpenModal(myCard) {
     console.log('Открываем модалку');
     refs.modalSearch.classList.remove('is-hidden-modal-form');
     window.addEventListener('keydown', onModalEscKeyPress);
@@ -12,8 +12,8 @@ export default function onOpenModal() {
 
     const modalWatched = document.querySelector('.modal-watched');
     const modalQueue = document.querySelector('.modal-queue');
-    modalWatched.addEventListener('click', onModalWatched);
-    modalQueue.addEventListener('click', onModalQueue);
+    modalWatched.addEventListener('click', () => onModalWatched(myCard));
+    modalQueue.addEventListener('click', () => onModalQueue(myCard));
     const modalClose = document.querySelector('.modal-close');
     modalClose.addEventListener('click', onCloseModal);
    

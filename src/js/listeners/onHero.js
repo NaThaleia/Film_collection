@@ -17,6 +17,6 @@ export default function onHero(e) {
   const modalMarkup = modal(myCard); // создаём макет
   refs.modalSearch.innerHTML = modalMarkup; // пихаем в дом
   
-  onOpenModal(e);
+  onOpenModal(myCard);
   return;
 }
