@@ -12,7 +12,7 @@ export default function onCloseModal() {
     modalWatched.removeEventListener('click', onModalWatched);
     modalQueue.removeEventListener('click', onModalQueue);
     modalClose.removeEventListener('click', onCloseModal);
-    
+
     refs.modalSearch.classList.add('is-hidden-modal-form');
     window.removeEventListener('keydown', onModalEscKeyPress);
     refs.modalSearch.removeEventListener('click', onBackdropClick);
