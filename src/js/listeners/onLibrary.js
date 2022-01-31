@@ -1,10 +1,14 @@
 import { refs } from '../base/refs';
 import onLibraryChangeClass from '../changeClassHeder/changeClassToLibrery';
+import onWatched from './onWatched';
 
-export default function onLibrary(evt) {
+export default function onLibrary(e) {
   refs.hero.innerHTML = '';
 
   onLibraryChangeClass();
-  console.log(`click on Library ${evt.target}`);
+  onWatched();
+
+  // console.log('я в библиотеке');
+
   return;
 }

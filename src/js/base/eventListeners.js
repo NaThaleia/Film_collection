@@ -35,5 +35,4 @@ export default function eventListeners(refs) {
   hero.addEventListener('click', onHero);
   nIceTeam.addEventListener('click', onTeamModal);
   pagination.addEventListener('click', onLoadingNextPage);
-  console.log('Hello World');
 }

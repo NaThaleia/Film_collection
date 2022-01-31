@@ -5,7 +5,7 @@ export default function renderCardsHero(arr) {
   const arrNewYear = NewYear(arr); // в исходном массиве с fetch  меняем год и передаем дальше
   const arrNewGenres = NewGenres(arrNewYear); // в исходном массиве с fetch  меняем жанр и передаем дальше
 
-  localStorage.setItem('cards', JSON.stringify(arrNewGenres));
+  // localStorage.setItem('cards', JSON.stringify(arrNewGenres));
 
   const cards = CardsHero(arrNewGenres);
 
