@@ -10,9 +10,13 @@ export default function onTeamModal(e) {
     onShow: instance => {
       window.addEventListener('keydown', onKeyboardClick);
       instance.element().querySelector('.team-modal__close').onclick = instance.close;
+
+      document.body.classList.add('off-scroll-modal');
     },
     onClose: () => {
       window.removeEventListener('keydown', onKeyboardClick);
+
+      document.body.classList.remove('off-scroll-modal');
     },
   });
 
