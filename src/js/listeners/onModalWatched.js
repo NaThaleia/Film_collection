@@ -37,7 +37,7 @@ function removeCardToLS(myCard) {
     const watchedCards = JSON.parse(localStorage.getItem('library-watched'));
     const indexInWatchedCards = watchedCards.findIndex(el => (el.id === myCard.id));
     console.log(indexInWatchedCards);
-    watchedCards.shift(indexInWatchedCards);
+    watchedCards.splice(indexInWatchedCards, 1);
 
     localStorage.setItem('library-watched', JSON.stringify(watchedCards));
     

@@ -33,7 +33,7 @@ export default function onModalQueue(myCard, modalRefs) {
     const queueCards = JSON.parse(localStorage.getItem('library-queue'));
     const indexInQueueCards = queueCards.findIndex(el => (el.id === myCard.id));
     console.log("index of Queue Card:", indexInQueueCards);
-    queueCards.shift(indexInQueueCards);
+    queueCards.splice(indexInQueueCards, 1);
 
     localStorage.setItem('library-queue', JSON.stringify(queueCards));
     
