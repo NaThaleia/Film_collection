@@ -1,23 +1,17 @@
 export function watchedCheck(myCardId, modalRefs) {
 
-  const libWatched = JSON.parse(localStorage.getItem('LibraryWatched'));
-
-  if (libWatched === null) return;
-  
-    if (libWatched.id == myCardId) {
-        console.log('Ура, такой фильм у нас уже есть в ПРОСМОТРЕННЫХ');
-        modalRefs.modalWatched.textContent = "remove from Watched";
-    }
-
+    const libWatched = JSON.parse(localStorage.getItem('library-watched'));
+    if (!libWatched) return; // Если в ЛС пусто
+    const isHere = libWatched.find(el => (el.id == myCardId));
+  if (!isHere) return; // Если в ЛС нет такого кино
+    modalRefs.modalWatched.textContent = "remove from watched";
+    return;
 }
 export function queueCheck(myCardId, modalRefs) {
-    const libQueue = JSON.parse(localStorage.getItem('LibraryQueue'));
-
-    if (libQueue === null) return;
-  
-    if (libQueue.id == myCardId) {
-        console.log('Ура, такой фильм у нас уже есть В ОЧЕРЕДИ');
-        modalRefs.modalQueue.textContent = "remove from Queue";
-    }
-    
+    const libQueue = JSON.parse(localStorage.getItem('library-queue'));
+    if (!libQueue) return; // Если в ЛС пусто
+    const isHere = libQueue.find(el => (el.id == myCardId));
+    if (!isHere) return; // Если в ЛС нет такого кино
+    modalRefs.modalQueue.textContent = "remove from queue";
+    return;
 }
