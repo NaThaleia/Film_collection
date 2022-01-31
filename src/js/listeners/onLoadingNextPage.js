@@ -1,6 +1,7 @@
 import { refs } from '../base/refs';
 import pageLoading from '../base/pageLoading';
 import pageLoadingSearch from '../base/pageLoadingSearch';
+import onWatched from '../listeners/onWatched';
 
 export default function onLoadingNextPage(e) {
   let nextPage = e.target.dataset.page;
@@ -25,5 +26,13 @@ export default function onLoadingNextPage(e) {
 
   if (currentPage.fetch === 'Search') {
     pageLoadingSearch(currentPage.query, parseInt(nextPage));
+  }
+
+  if (currentPage.fetch === 'Watched') {
+    onWatched(parseInt(nextPage));
+  }
+
+  if (currentPage.fetch === 'Queue') {
+    onQueue(parseInt(nextPage));
   }
 }
