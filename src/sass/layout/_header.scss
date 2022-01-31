@@ -9,11 +9,35 @@
 .header_imageHome {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
     url(../images/rectangle2-min.jpg);
+  animation-name: opacity;
+  animation-duration: 1000ms;
 }
+@keyframes opacity {
+  0% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .header_imageLibrery {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
     url(../images/rectangle1-min.jpg);
+  animation-name: opacity2;
+  animation-duration: 1000ms;
 }
+@keyframes opacity2 {
+  0% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .header__container {
   padding-top: 60px;
 }
@@ -96,6 +120,21 @@
     opacity: 1;
     background-color: #ff6b08;
     border-radius: 2px;
+
+    animation-name: move;
+    animation-duration: 1000ms;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: scale(0);
+    transform-origin: center;
+  }
+
+  100% {
+    transform: scale(1);
+    transform-origin: center;
   }
 }
 // .header__navListLink:hover {

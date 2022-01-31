@@ -34,9 +34,11 @@ export default function eventListeners(refs) {
   queueBtnHeader.addEventListener('click', onQueue);
   hero.addEventListener('click', onHero);
   nIceTeam.addEventListener('click', onTeamModal);
+
   // modalClose.addEventListener('click', onCloseModal);
- 
+
   window.addEventListener('keydown', onModalEscKeyPress);
+
   pagination.addEventListener('click', onLoadingNextPage);
   console.log('Hello World');
 }
