@@ -13,25 +13,25 @@ import onLoadingNextPage from '../listeners/onLoadingNextPage';
 
 export default function eventListeners(refs) {
   const {
-    home,
+    homeBtnHeader,
     headerLogo,
-    library,
+    libraryBtnHeader,
     searchMovie,
     hero,
-    watched,
-    queue,
+    watchedBtnHeader,
+    queueBtnHeader,
     nIceTeam,
     modalClose,
     modalSearch,
     pagination,
   } = refs;
-  home.addEventListener('click', onHome);
+  homeBtnHeader.addEventListener('click', onHome);
   headerLogo.addEventListener('click', onHome);
-  library.addEventListener('click', onLibrary);
+  libraryBtnHeader.addEventListener('click', onLibrary);
   searchMovie.addEventListener('submit', onSearchMovie);
   // hero.addEventListener('click', onHero);
-  // watched.addEventListener('click', onWatched);
-  // queue.addEventListener('click', onQueue);
+  watchedBtnHeader.addEventListener('click', onWatched);
+  queueBtnHeader.addEventListener('click', onQueue);
   hero.addEventListener('click', onHero);
   nIceTeam.addEventListener('click', onTeamModal);
   // modalClose.addEventListener('click', onCloseModal);
