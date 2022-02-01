@@ -22,3 +22,14 @@
     width: 922px;
   }
 }
+
+.library-foto {
+  height: 300px;
+  background-position: 50% 20px;
+  background-repeat: no-repeat;
+  background-image: url('https://raw.githubusercontent.com/NaThaleia/Film_collection/main/src/images/library-foto.jpg');
+
+  @media screen and (min-width: 768px) {
+    background-position: 50% 50%;
+  }
+}
