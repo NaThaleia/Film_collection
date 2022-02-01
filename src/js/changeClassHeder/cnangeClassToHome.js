@@ -4,9 +4,11 @@ export default function onHomeChangeClass(evt) {
   if (!refs.homeBtnHeader.classList.contains('current')) {
     refs.homeBtnHeader.classList.add('current');
     refs.libraryBtnHeader.classList.remove('current');
-    console.log(`add class`);
+      console.log(`add class`);
+      
   }
-
+ 
+    
   if (!refs.header.classList.contains('header_imageHome')) {
     refs.header.classList.add('header_imageHome');
     refs.header.classList.remove('header_imageLibrery');

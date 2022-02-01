@@ -5,7 +5,8 @@ export default function onLibraryChangeClass(evt) {
     refs.libraryBtnHeader.classList.add('current');
     refs.homeBtnHeader.classList.remove('current');
     console.log(`add class`);
-  }
+    }
+    
 
   if (!refs.header.classList.contains('header_imageLibrery')) {
     refs.header.classList.add('header_imageLibrery');
