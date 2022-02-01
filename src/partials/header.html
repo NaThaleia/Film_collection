@@ -10,26 +10,17 @@
       <ul class="header__navList">
         <button class="header__navListLink current home-header">Home</button>
         <button class="header__navListLink library-header">My library</button>
-       </ul>
+      </ul>
     </nav>
-    <form class="search-film-form" action="">
-      <div class="search-film-inputs">
-      <input placeholder="Поиск фильмов" class="some-input " type="text" />
-     
-     <button class="submit"></button>
+    <div class="search-block">
+      <form class="search-film-form" action="">
+        <div class="search-film-inputs">
+          <input placeholder="Поиск фильмов" class="some-input " type="text" />
+          <button class="submit"></button>
+        </div> 
+      </form>
+      <p class="search-errors is-hidden">Search result not successful. Enter the correct movie name</p>
     </div>
-    <div>
-     <p class="search-errors is-hidden">Search result not successful. Enter the correct movie name</p>
-      </div>
-     
-    </form>
-    <!-- Змінено щоб ховати цілий блок зразу -->
-    <!-- <div class="library-navigation">
-      <button type="button" class=" watched-btn is-hidden orange ">
-        Watched
-      </button>
-      <button type="button" class=" queue-btn is-hidden">Queue</button>
-    </div> -->
     <div class="library-navigation is-hidden">
       <button type="button" class=" watched-btn-header orange watched-header">
         Watched
