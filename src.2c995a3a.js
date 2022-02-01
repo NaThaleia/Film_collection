@@ -77,4 +77,4 @@ var e,n=arguments[3];!function(t){"object"==typeof exports&&"undefined"!=typeof 
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss");var e=require("./js/base/refs"),s=t(require("./js/base/eventListeners")),r=t(require("./js/base/pageLoading")),i=t(require("./js/fetch/fetchApiGenresList")),u=require("notiflix/build/notiflix-block-aio");function t(e){return e&&e.__esModule?e:{default:e}}function a(){u.Block.hourglass(".hero"),(0,i.default)(),(0,r.default)(),(0,s.default)(e.refs)}a();
 },{"./sass/main.scss":"clu1","./js/base/refs":"rzWj","./js/base/eventListeners":"LPK7","./js/base/pageLoading":"BS1Q","./js/fetch/fetchApiGenresList":"pR8r","notiflix/build/notiflix-block-aio":"fFQd"}]},{},["Focm"], null)
-//# sourceMappingURL=/Film_collection/src.719f1664.js.map
+//# sourceMappingURL=/Film_collection/src.2c995a3a.js.map
