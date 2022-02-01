@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 60px;
+  width: 100%;
 }
 
 .all-pages {
@@ -55,9 +56,19 @@
   text-align: center;
   padding: 10px 5px 1px 5px;
 }
+@media screen and (max-width: 767px) {
+  .threeDots {
+    //display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .threeDots {
+    display: inline-block;
+  }
+}
 
 .pagination__wrapper_pages {
-  list-style-type: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -96,18 +107,6 @@
   }
 }
 
-// .page:hover {
-//   background-color: #ff6b08;
-//   color: #ffffff;
-//   border-radius: 5px;
-// }
-
-// .page.active {
-//   background-color: #ff6b08;
-//   color: #ffffff;
-//   border-radius: 5px;
-// }
-
 .is-disabled {
   pointer-events: none;
   background-color: #c4c0c0;
@@ -117,4 +116,32 @@
   background-color: #ff6b08;
   color: #fff;
   border-radius: 5px;
+}
+@media screen and (max-width: 400px) {
+  .all-pages {
+    //display: flex;
+  }
+}
+@media screen and (max-width: 400px) {
+  .page li {
+    width: 38px;
+    height: 38px;
+    margin: 3px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page {
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pag-arrow {
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+  }
 }
