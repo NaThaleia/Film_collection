@@ -13,6 +13,7 @@ export default function onWatched(page = 1) {
 
   if (!arr || !arr.length) {
     refs.pagination.classList.add('hidden');
+    refs.hero.classList.add('library-foto');
     console.log('not data');
     return;
   }
