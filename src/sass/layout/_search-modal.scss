@@ -169,14 +169,16 @@
     width: 136px;
   }
 
-  &:focus,
+  // &:focus,
   &:hover {
     background-color: #ff6b01;
     color: #ffffff;
     border: 1px solid #ff6b01;
   }
 }
-
+.selected {
+  background-color: $added-btn;
+}
 .modal-watched {
   margin-right: 15px;
 }
