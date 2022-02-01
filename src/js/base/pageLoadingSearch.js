@@ -13,7 +13,7 @@ export default function pageLoadingSearch(query, page = 1) {
         // return data;
       }
       renderCardsHero(data.results);
-      // localStorage.setItem('cards', JSON.stringify(data.results)); // перенесено в renderCardsHero, потому что там исходный массиф форматирует даты и жанры
+      localStorage.setItem('cards', JSON.stringify(data.results)); // перенесено в renderCardsHero, потому что там исходный массиф форматирует даты и жанры
       return data;
     })
     .then(data => {
