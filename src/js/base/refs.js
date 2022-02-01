@@ -6,6 +6,7 @@ export const refs = {
   libraryNavigation: document.querySelector('.library-navigation'),
   searchMovie: document.querySelector('.search-film-form'),
   searchErrors: document.querySelector('.search-errors'),
+  searchHeaderInput: document.querySelector('.some-input'),
   watchedBtnHeader: document.querySelector('.watched-header'),
   queueBtnHeader: document.querySelector('.queue-header'),
   hero: document.getElementById('filmList'),
