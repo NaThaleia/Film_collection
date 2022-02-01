@@ -1,15 +1,15 @@
 export default function onModalQueue(myCard, modalRefs) {
 
-    // console.log(myCard.id);
-    // console.log(`onModalQueue - myCard is:${myCard}`);
     if (modalRefs.modalQueue.textContent === "add to queue") {
         addCardToLS(myCard);
         modalRefs.modalQueue.textContent = "remove from queue";
+        modalRefs.modalQueue.classList.add("selected");
         return;
     }
     if (modalRefs.modalQueue.textContent === "remove from queue") {
         removeCardToLS(myCard);
         modalRefs.modalQueue.textContent = "add to queue";
+        modalRefs.modalQueue.classList.remove("selected");
         return;
     }
 
@@ -23,8 +23,7 @@ export default function onModalQueue(myCard, modalRefs) {
         }
         queueCards = JSON.parse(localStorage.getItem('library-queue'));
         queueCards.push(myCard);
-    
-        console.log(queueCards);
+
         localStorage.setItem('library-queue', JSON.stringify(queueCards));
     
         return;
@@ -32,7 +31,7 @@ export default function onModalQueue(myCard, modalRefs) {
     function removeCardToLS(myCard) {
     const queueCards = JSON.parse(localStorage.getItem('library-queue'));
     const indexInQueueCards = queueCards.findIndex(el => (el.id === myCard.id));
-    console.log("index of Queue Card:", indexInQueueCards);
+
     queueCards.splice(indexInQueueCards, 1);
 
     localStorage.setItem('library-queue', JSON.stringify(queueCards));

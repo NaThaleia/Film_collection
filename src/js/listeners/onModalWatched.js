@@ -1,24 +1,22 @@
 export default function onModalWatched(myCard, modalRefs) {
     console.log("onModalWatched in process");
-    // console.log(myCard.id);
-    // console.log(`onModalWatched - myCard is:${myCard}`);
 
     // Проверка, есть ли этот фильм в Watched
-    console.log(modalRefs.modalWatched.textContent)
     if (modalRefs.modalWatched.textContent === "add to watched") {
-        console.log("добавляем карточку")
         addCardToLS(myCard);
         modalRefs.modalWatched.textContent = "remove from watched";
+        modalRefs.modalWatched.classList.add("selected");
         return;
     }
         if (modalRefs.modalWatched.textContent === "remove from watched") {
         removeCardToLS(myCard);
         modalRefs.modalWatched.textContent = "add to watched";
+        modalRefs.modalWatched.classList.remove("selected");
         return;
     }
     function addCardToLS(myCard) {
         let watchedCards = [];
-        console.log("addCardToLS in process");
+
         if (JSON.parse(localStorage.getItem('library-watched')) === null) {
             watchedCards.push(myCard);
             localStorage.setItem('library-watched', JSON.stringify(watchedCards));
@@ -27,7 +25,6 @@ export default function onModalWatched(myCard, modalRefs) {
         watchedCards = JSON.parse(localStorage.getItem('library-watched'));
         watchedCards.push(myCard);
 
-        console.log(watchedCards);
         localStorage.setItem('library-watched', JSON.stringify(watchedCards));
     
         return;

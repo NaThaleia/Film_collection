@@ -4,7 +4,8 @@ export function watchedCheck(myCardId, modalRefs) {
     if (!libWatched) return; // Если в ЛС пусто
     const isHere = libWatched.find(el => (el.id == myCardId));
   if (!isHere) return; // Если в ЛС нет такого кино
-    modalRefs.modalWatched.textContent = "remove from watched";
+  modalRefs.modalWatched.textContent = "remove from watched";
+  modalRefs.modalWatched.classList.add("selected"); 
     return;
 }
 export function queueCheck(myCardId, modalRefs) {
@@ -12,6 +13,7 @@ export function queueCheck(myCardId, modalRefs) {
     if (!libQueue) return; // Если в ЛС пусто
     const isHere = libQueue.find(el => (el.id == myCardId));
     if (!isHere) return; // Если в ЛС нет такого кино
-    modalRefs.modalQueue.textContent = "remove from queue";
+  modalRefs.modalQueue.textContent = "remove from queue";
+  modalRefs.modalQueue.classList.add("selected");
     return;
 }
