@@ -19,3 +19,4 @@ export const refs = {
   nIceTeam: document.querySelector('.team-modal-btn'),
   modalSearch: document.querySelector('.backdrop-modal-form'),
 };
+export const xx = {place: "home"}; // "watched" or "queue"

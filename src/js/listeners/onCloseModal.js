@@ -1,8 +1,9 @@
-import { refs } from "../base/refs";
+import { refs, xx } from "../base/refs";
 import onModalEscKeyPress from './onModalEscKeyPress';
 import onBackdropClick from "./onBackdropClick";
 import onModalWatched from "./onModalWatched";
 import onModalQueue from "./onModalQueue";
+import cardsHero from '../templates/heroCards.hbs'
 
 export default function onCloseModal() {
     console.log('Закрыть модалку');
@@ -17,5 +18,18 @@ export default function onCloseModal() {
     window.removeEventListener('keydown', onModalEscKeyPress);
     refs.modalSearch.removeEventListener('click', onBackdropClick);
     document.body.style.overflow = ""; 
+
+    if (xx.place === "watched") {
+    const arr = JSON.parse(localStorage.getItem('library-watched'));
+    const markup = cardsHero(arr);
+        refs.hero.innerHTML = markup;
+    return;
+  }
+    if (xx.place === "queue") {
+    const arr = JSON.parse(localStorage.getItem('library-queue'));
+    const markup = cardsHero(arr);
+        refs.hero.innerHTML = markup;
+    return;
+  }
     return;
 }
