@@ -30,10 +30,10 @@ export default function onLoadingNextPage(e) {
   }
 
   if (currentPage.fetch === 'Watched') {
-    onWatched(parseInt(nextPage));
+    onWatched(e, parseInt(nextPage));
   }
 
   if (currentPage.fetch === 'Queue') {
-    onQueue(parseInt(nextPage));
+    onQueue(e, parseInt(nextPage));
   }
 }
