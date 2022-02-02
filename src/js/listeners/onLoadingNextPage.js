@@ -2,6 +2,7 @@ import { refs } from '../base/refs';
 import pageLoading from '../base/pageLoading';
 import pageLoadingSearch from '../base/pageLoadingSearch';
 import onWatched from '../listeners/onWatched';
+import onQueue from '../listeners/onQueue';
 
 export default function onLoadingNextPage(e) {
   let nextPage = e.target.dataset.page;
