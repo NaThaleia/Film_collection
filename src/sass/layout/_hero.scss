@@ -1,25 +1,22 @@
 .hero {
   flex-grow: 1;
-  padding: 60px 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .films__list {
   position: relative;
   margin: 0 auto;
-  padding: 0 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 274px), 1fr));
-  gap: 30px;
-  width: 274px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
   list-style: none;
   margin-bottom: 46px;
 
   @media screen and (min-width: 768px) {
-    width: 768px;
-  }
-
-  @media screen and (min-width: 1024px) {
-    width: 1024px;
+    gap: 30px;
   }
 }
 
