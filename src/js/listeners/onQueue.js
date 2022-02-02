@@ -1,9 +1,10 @@
 import { refs, xx } from '../base/refs';
 import renderCardsHero from '../base/renderCardsHero';
 import renderPagination from '../base/renderPagination';
-import onLibraryChangeClassBtnQueue from "../changeClassHeder/changeClassLibraryBtnQueue"
+import onLibraryChangeClassBtnQueue from '../changeClassHeder/changeClassLibraryBtnQueue';
 
 // Кнопка Queue в хедері
+
 export default function onQueue(page = 1) {
   xx.place = "queue";
   onLibraryChangeClassBtnQueue()
@@ -34,5 +35,4 @@ export default function onQueue(page = 1) {
 
   renderCardsHero(arr);
   renderPagination(totalPage, page);
-
 }

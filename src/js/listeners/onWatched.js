@@ -1,12 +1,14 @@
 import { refs, xx } from '../base/refs';
 import CardsHero from '../templates/HeroCards';
 import renderPagination from '../base/renderPagination';
-import onLibraryChangeClassBtnWatch from "../changeClassHeder/changeClassLibraryBtnWatch"
+import onLibraryChangeClassBtnWatch from '../changeClassHeder/changeClassLibraryBtnWatch';
 
 // Кнопка Watched в хедері
+
 export default function onWatched(page = 1) {
   xx.place = "watched";
   onLibraryChangeClassBtnWatch()
+
   refs.hero.innerHTML = '';
 
   const PAGE_SIZE = 20;
@@ -35,6 +37,4 @@ export default function onWatched(page = 1) {
   const markup = CardsHero(arr);
   refs.hero.insertAdjacentHTML('beforeend', markup);
   renderPagination(totalPage, page);
-
-
 }
