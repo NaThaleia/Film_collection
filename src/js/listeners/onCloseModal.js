@@ -4,6 +4,8 @@ import onBackdropClick from "./onBackdropClick";
 import onModalWatched from "./onModalWatched";
 import onModalQueue from "./onModalQueue";
 
+
+
 export default function onCloseModal() {
     console.log('Закрыть модалку');
     const modalWatched = document.querySelector('.modal-watched');

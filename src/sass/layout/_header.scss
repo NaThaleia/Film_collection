@@ -8,7 +8,27 @@
 }
 .header_imageHome {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-    url(../images/rectangle2-min.jpg);
+    url(../images/mobile/header_home_mobile.jpg);
+  @media (min-device-pixel-ratio: 2) {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../images/mobile/header_home_mobile@2x.jpg);
+  }
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../images/desktop/header_home.jpg);
+    @media (min-device-pixel-ratio: 2) {
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url(../images/desktop/header_home@2x.jpg);
+    }
+    @media screen and (min-width: 1024px) {
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url(../images/Rectangle1024x1.jpg);
+      @media (min-device-pixel-ratio: 2) {
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+          url(../images/rectangle2-min.jpg);
+      }
+    }
+  }
   animation-name: opacity;
   animation-duration: 1000ms;
 }
@@ -24,7 +44,27 @@
 
 .header_imageLibrery {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-    url(../images/rectangle1-min.jpg);
+    url(../images/mobile/header_mylibrary_mobile.jpg);
+  @media (min-device-pixel-ratio: 2) {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../images/mobile/header_mylibrary_mobile@2x.jpg);
+  }
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../images/desktop/header_mylibrary.jpg);
+    @media (min-device-pixel-ratio: 2) {
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url(../images/desktop/header_mylibrary@2x.jpg);
+    }
+    @media screen and (min-width: 1024px) {
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url(../images/Rectangle1024x1.2.jpg);
+      @media (min-device-pixel-ratio: 2) {
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+          url(../images/rectangle1-min.jpg);
+      }
+    }
+  }
   animation-name: opacity2;
   animation-duration: 1000ms;
 }
