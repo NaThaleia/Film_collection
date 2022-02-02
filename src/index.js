@@ -7,7 +7,7 @@ import { Block } from 'notiflix/build/notiflix-block-aio';
 
 function start() {
 
-  Block.hourglass('.hero');
+  // Block.hourglass('.hero');
   fetchApiGenresList();
   pageLoading();
   eventListener(refs);
