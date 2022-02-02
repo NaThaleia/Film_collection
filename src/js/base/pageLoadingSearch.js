@@ -12,6 +12,7 @@ export default function pageLoadingSearch(query, page = 1) {
       if (!data.total_results) {
         refs.searchErrors.classList.remove('is-hidden');
         refs.pagination.classList.add('hidden');
+        spinner('stop');
         throw new Error(response.status);
         // return data;
       }

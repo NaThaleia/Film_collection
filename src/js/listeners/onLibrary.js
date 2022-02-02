@@ -4,7 +4,6 @@ import onWatched from './onWatched';
 
 export default function onLibrary(e) {
   refs.hero.innerHTML = '';
-  spinner('stop');
 
   onLibraryChangeClass();
   onWatched();
