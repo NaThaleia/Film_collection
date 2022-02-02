@@ -2,8 +2,11 @@ import { refs } from './refs';
 import fetchApiSearch from '../fetch/fetchApiSearch';
 import renderCardsHero from './renderCardsHero';
 import renderPagination from './renderPagination';
+import { spinner } from './spinner';
 
 export default function pageLoadingSearch(query, page = 1) {
+  spinner('start');
+
   fetchApiSearch(query, page)
     .then(data => {
       if (!data.total_results) {
@@ -12,6 +15,7 @@ export default function pageLoadingSearch(query, page = 1) {
         throw new Error(response.status);
         // return data;
       }
+      spinner('stop');
       renderCardsHero(data.results);
       localStorage.setItem('cards', JSON.stringify(data.results)); // перенесено в renderCardsHero, потому что там исходный массиф форматирует даты и жанры
       return data;
