@@ -58,7 +58,8 @@
 }
 @media screen and (max-width: 767px) {
   .threeDots {
-    //display: none;
+    margin: 0;
+    padding: 10px 0px 1px 0px;
   }
 }
 
@@ -117,11 +118,7 @@
   color: #fff;
   border-radius: 5px;
 }
-@media screen and (max-width: 400px) {
-  .all-pages {
-    //display: flex;
-  }
-}
+
 @media screen and (max-width: 400px) {
   .page li {
     width: 38px;
@@ -130,7 +127,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .page {
     width: 30px;
     height: 30px;
@@ -138,7 +135,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .pag-arrow {
     width: 30px;
     height: 30px;
