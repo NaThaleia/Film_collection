@@ -1,15 +1,21 @@
 <div class='modal-form'>
   {{#if poster_path}}
-  <img src='https://image.tmdb.org/t/p/w500{{poster_path}}' alt='фильм' class='modal-foto-film' />
+    <img src='https://image.tmdb.org/t/p/w500{{poster_path}}' alt='фильм' class='modal-foto-film' />
   {{else}}
-  <img src='https://raw.githubusercontent.com/NaThaleia/Film_collection/main/src/images/film-card.jpg' alt='фильм' class='modal-foto-film' />
+    <img
+      src='https://raw.githubusercontent.com/NaThaleia/Film_collection/main/src/images/film-card.jpg'
+      alt='фильм'
+      class='modal-foto-film'
+    />
   {{/if}}
   <div class='modal-info-film'>
     <h3 class='modal-title'>{{original_title}}</h3>
     <table class='modal-table'>
       <tr>
         <td class='modal-left'>Vote / Votes</td>
-        <td class='modal-right'><span class='modal-vote'>{{vote_average}}</span> / {{vote_count}}</td>
+        <td class='modal-right'><span class='modal-vote'>{{vote_average}}</span>
+          /
+          {{vote_count}}</td>
       </tr>
       <tr>
         <td class='modal-left'>Popularity</td>
@@ -21,7 +27,7 @@
       </tr>
       <tr>
         <td class='modal-left'>Genre</td>
-        <td class='modal-right'>{{genre_ids}}</td>
+        <td class='modal-right'>{{genre_str}}</td>
       </tr>
     </table>
     <p class='modal-about'>About</p>

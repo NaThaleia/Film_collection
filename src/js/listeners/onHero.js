@@ -15,7 +15,7 @@ export default function onHero(e) {
   /* замена жанров с чисел на буквы */
   const arrGenresLs = JSON.parse(localStorage.getItem('genres')); // сюда обязательно надо вставить тру/кэч вообще на весь блок замены
 
-  myCard.genre_ids = myCard.genre_ids
+  myCard.genre_str = myCard.genre_ids
     .map(x => {
       return arrGenresLs.find(({ id }) => id === x);
     })
