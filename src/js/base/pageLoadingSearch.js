@@ -18,6 +18,7 @@ export default function pageLoadingSearch(query, page = 1) {
       }
       spinner('stop');
       renderCardsHero(data.results);
+      console.log(data);
       localStorage.setItem('cards', JSON.stringify(data.results)); // перенесено в renderCardsHero, потому что там исходный массиф форматирует даты и жанры
       return data;
     })
@@ -27,7 +28,6 @@ export default function pageLoadingSearch(query, page = 1) {
         page: data.page,
         fetch: 'Search',
         query: query,
-        place: home
       };
       localStorage.setItem('page', JSON.stringify(settings));
       return data;

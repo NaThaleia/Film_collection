@@ -14,6 +14,7 @@ export default function renderPagination(maxPage, currentPage) {
   refs.paginationLast.classList.remove('hidden');
 
   /* данные для последней страници */
+  console.log("maxPage", maxPage);
   refs.paginationLast.textContent = maxPage;
   refs.paginationLast.dataset.page = maxPage;
 

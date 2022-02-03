@@ -12,6 +12,7 @@ export default function pageLoading(page = 1) {
       // Block.remove('.hero');
       spinner('stop');
       renderCardsHero(data.results);
+      console.log(data);
       localStorage.setItem('cards', JSON.stringify(data.results)); // перенесено в renderCardsHero, потому что там исходный массиф форматирует даты и жанры
 
       return data;

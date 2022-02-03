@@ -31,7 +31,7 @@ export default function onCloseModal() {
         if (((settingsLS.cardsQtty-1) % 20) === 0) {
             settingsLS.page -= 1;
         }
-        onWatched(settingsLS.pages, settingsLS.page);
+        onWatched(settingsLS.page);
         console.log("рисуем карточки снова - для Watched");
         return;
     }
@@ -41,7 +41,7 @@ export default function onCloseModal() {
         if (((settingsLS.cardsQtty-1) % 20) === 0) {
             settingsLS.page -= 1;
         }
-        onQueue(settingsLS.pages, settingsLS.page);
+        onQueue(settingsLS.page);
         console.log("рисуем карточки снова - для Queue");
         return;
      }
