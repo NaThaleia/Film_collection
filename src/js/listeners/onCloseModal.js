@@ -28,20 +28,23 @@ export default function onCloseModal() {
 
     if (settingsLS.fetch === "Watched") {
         // проверка - не нужно ли уменьшить page на 1
-        if (((settingsLS.cardsQtty-1) % 20) === 0) {
+        const x = JSON.parse(localStorage.getItem('library-watched')).length;
+        console.log("x", x);
+        if ((x % 20) === 0) {
             settingsLS.page -= 1;
         }
-        onWatched(settingsLS.page);
+        onWatched(null, settingsLS.page);
         console.log("рисуем карточки снова - для Watched");
         return;
     }
-
     if (settingsLS.fetch === "Queue") {
         // проверка - не нужно ли уменьшить page на 1
-        if (((settingsLS.cardsQtty-1) % 20) === 0) {
+        const x = JSON.parse(localStorage.getItem('library-queue')).length;
+        console.log("x", x);
+        if ((x % 20) === 0) {
             settingsLS.page -= 1;
         }
-        onQueue(settingsLS.page);
+        onQueue(null, settingsLS.page);
         console.log("рисуем карточки снова - для Queue");
         return;
      }
