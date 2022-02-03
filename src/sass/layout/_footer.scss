@@ -48,10 +48,16 @@
   color: $secondary-color;
   &:hover,
   &:focus {
+    border-color: $accent-color;
     text-decoration: none;
     color: $accent-color;
     transition: all 0.5s cubic-bezier(0.8, 0.4, 0.3, 0.9);
-    box-shadow: 0 0 5px 4px rgb(250 119 12 / 50%);
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    border-style: solid;
+    border-width: 2px;
   }
 }
 
