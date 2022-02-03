@@ -20,8 +20,8 @@ export default function pageLoading(page = 1) {
       renderPagination(data.total_pages, data.page);
       const settings = {
         page: data.page,
+        pages: data.total_pages,
         fetch: 'Week',
-        place: 'home'
       };
       localStorage.setItem('page', JSON.stringify(settings));
       return data;

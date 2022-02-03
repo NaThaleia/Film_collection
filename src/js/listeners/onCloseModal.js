@@ -3,7 +3,9 @@ import onModalEscKeyPress from './onModalEscKeyPress';
 import onBackdropClick from "./onBackdropClick";
 import onModalWatched from "./onModalWatched";
 import onModalQueue from "./onModalQueue";
-import CardsHero from '../templates/heroCards.hbs';
+// import CardsHero from '../templates/heroCards.hbs';
+import onQueue from "./onQueue";
+import onWatched from "./onWatched";
 
 export default function onCloseModal() {
     console.log('Закрыть модалку');
@@ -20,19 +22,27 @@ export default function onCloseModal() {
     refs.modalSearch.removeEventListener('click', onBackdropClick);
     document.body.style.overflow = ""; 
 
+    // Обновляем страничку с фильмами после их удаления
+
     const settingsLS = JSON.parse(localStorage.getItem('page'));
-    if (settingsLS.place === "watched") {
-        const arr = localStorage.getItem('library-watched');
-        const markUp = CardsHero(arr);
-        refs.hero.innerHTML = markUp;
-        console.log('watched rerender');
+
+    if (settingsLS.fetch === "Watched") {
+        // проверка - не нужно ли уменьшить page на 1
+        if (((settingsLS.cardsQtty-1) % 20) === 0) {
+            settingsLS.page -= 1;
+        }
+        onWatched(settingsLS.pages, settingsLS.page);
+        console.log("рисуем карточки снова - для Watched");
         return;
-     }
-    if (settingsLS.place === "queue") {
-        const arr = localStorage.getItem('library-queue');
-        const markUp = CardsHero(arr);
-        refs.hero.innerHTML = markUp;
-        console.log('queue rerender');
+    }
+
+    if (settingsLS.fetch === "Queue") {
+        // проверка - не нужно ли уменьшить page на 1
+        if (((settingsLS.cardsQtty-1) % 20) === 0) {
+            settingsLS.page -= 1;
+        }
+        onQueue(settingsLS.pages, settingsLS.page);
+        console.log("рисуем карточки снова - для Queue");
         return;
      }
     return;
