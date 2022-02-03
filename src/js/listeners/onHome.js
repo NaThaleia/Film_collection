@@ -5,6 +5,7 @@ import onHomeChangeClass from '../changeClassHeder/cnangeClassToHome';
 export default function onHome(evt) {
   refs.searchHeaderInput.value = '';
   refs.hero.innerHTML = '';
+  
 
   pageLoading();
   onHomeChangeClass();
