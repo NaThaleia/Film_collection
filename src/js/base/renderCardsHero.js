@@ -30,7 +30,7 @@ function NewGenres(arr) {
         ...e,
         genre_ids: e.genre_ids
           .map(x => {
-            return arrGenresLs.find(({ id }) => id == x);
+            return arrGenresLs.find(({ id }) => id === x);
           })
           .map(({ name }) => name),
       };
