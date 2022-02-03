@@ -8,7 +8,27 @@
 }
 .header_imageHome {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-    url(../images/rectangle2-min.jpg);
+    url(../images/mobile/header_home_mobile.jpg);
+  @media (min-device-pixel-ratio: 2) {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../images/mobile/header_home_mobile@2x.jpg);
+  }
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../images/desktop/header_home.jpg);
+    @media (min-device-pixel-ratio: 2) {
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url(../images/desktop/header_home@2x.jpg);
+    }
+    @media screen and (min-width: 1024px) {
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url(../images/Rectangle1024x1.jpg);
+      @media (min-device-pixel-ratio: 2) {
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+          url(../images/rectangle2-min.jpg);
+      }
+    }
+  }
   animation-name: opacity;
   animation-duration: 1000ms;
 }
@@ -24,7 +44,27 @@
 
 .header_imageLibrery {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-    url(../images/rectangle1-min.jpg);
+    url(../images/mobile/header_mylibrary_mobile.jpg);
+  @media (min-device-pixel-ratio: 2) {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../images/mobile/header_mylibrary_mobile@2x.jpg);
+  }
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../images/desktop/header_mylibrary.jpg);
+    @media (min-device-pixel-ratio: 2) {
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url(../images/desktop/header_mylibrary@2x.jpg);
+    }
+    @media screen and (min-width: 1024px) {
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url(../images/Rectangle1024x1.2.jpg);
+      @media (min-device-pixel-ratio: 2) {
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+          url(../images/rectangle1-min.jpg);
+      }
+    }
+  }
   animation-name: opacity2;
   animation-duration: 1000ms;
 }
@@ -275,19 +315,20 @@
   border: #ff6b01;
 }
 
-// переключатель темы
+// Переключатель темы
 
 .toolbar {
   display: flex;
   justify-content: flex-end;
-  padding: 16px 24px;
-  position: absolute;
+  padding: 0px 0px;
+  //position: absolute;
   right: 0;
   top: 180px;
 }
 .theme-switch {
   display: flex;
   align-items: center;
+  margin-top: -10px;
 }
 
 .theme-switch__icon {
@@ -298,12 +339,27 @@
   margin-left: 8px;
 }
 
+.theme-switch__icon-moon {
+  fill: #ffffff;
+  height: 25px;
+  width: 25px;
+  //margin-right: 0px;
+  margin-left: 8px;
+}
+.theme-switch__icon-sun {
+  fill: #ffffff;
+  height: 25px;
+  width: 25px;
+  margin-right: 8px;
+  //margin-left: 8px;
+}
+
 .theme-switch__control {
   display: flex;
   align-items: center;
   flex-shrink: 0;
   position: relative;
-  width: 34px;
+  width: 32px;
   height: 16px;
   border-radius: 50em;
   padding: 3px 0;
@@ -359,4 +415,8 @@
 .theme-switch__toggle:focus + .theme-switch__track,
 .theme-switch__toggle:active + .theme-switch__track {
   box-shadow: 0 0 0 3px #ff6b01;
+}
+.dark-theme {
+  color: lightgrey;
+  background-color: #222;
 }
