@@ -68,3 +68,28 @@
     line-height: 14px;
   }
 }
+
+// стили кнопки  youtube//
+
+.btn-youtube {
+  position: absolute;
+  margin: 5px 10px;
+  background-size: contain;
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  background-image: url('../images/icons8-play-button-2.svg');
+  background-color: transparent;
+
+  &:hover,
+  &:focus{
+    opacity: 1;
+  }
+}

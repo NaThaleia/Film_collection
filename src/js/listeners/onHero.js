@@ -1,6 +1,7 @@
 import onOpenModal from './onOpenModal';
 import modal from '../templates/modal.hbs';
 import { refs } from '../base/refs';
+import trailer from '../modal/trailer'
 
 export default function onHero(e) {
   e.preventDefault();
@@ -9,6 +10,11 @@ export default function onHero(e) {
   const target = e.target.closest('.filmCard');
 
   const myCardId = target.dataset.id; // куда клик
+
+  if (e.target.className === 'btn-youtube') {  // добавление трейлера
+    trailer.drawModalForTrailler(myCardId)
+    return
+  }
 
   const myCard = JSON.parse(localStorage.getItem('cards')).find(el => el.id == myCardId);
 
