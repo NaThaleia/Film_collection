@@ -35,8 +35,9 @@
   height: 600px;
   background-position: 50% 20px;
   background-repeat: no-repeat;
-  background-image: url('https://raw.githubusercontent.com/NaThaleia/Film_collection/main/src/images/hero/hero-img.jpg');
+  background-image: url('https://raw.githubusercontent.com/NaThaleia/Film_collection/main/src/images/hero/hero-img-mob.jpg');
   @media screen and (min-width: 768px) {
     background-position: 50% 50%;
+    background-image: url('https://raw.githubusercontent.com/NaThaleia/Film_collection/main/src/images/hero/hero-img.jpg');
   }
 }
