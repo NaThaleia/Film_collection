@@ -24,7 +24,7 @@ export default function onQueue(e, page = 1) {
     cardsQtty: arr.length
   };
 
-  const total_pages = Math.ceil(arr.length / PAGE_SIZE);
+  settings.pages = Math.ceil(arr.length / PAGE_SIZE);
   const position = (page - 1) * PAGE_SIZE;
 
   localStorage.setItem('page', JSON.stringify(settings));
@@ -33,5 +33,5 @@ export default function onQueue(e, page = 1) {
   localStorage.setItem('cards', JSON.stringify(arr));
 
   renderCardsHero(arr);
-  renderPagination(total_pages, page);
+  renderPagination(settings.pages, page);
 }
