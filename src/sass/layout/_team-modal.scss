@@ -16,14 +16,16 @@
   overflow: auto;
 }
 .team-modal__caption {
+  font-size: 20px;
   color: $secondary-color;
-  margin: 0 auto 20px;
+  margin: 0 auto 15px;
   @media screen and (min-width: 768px) {
     margin: 0 auto 30px;
+    font-size: 24px;
   }
 }
 .team-modal__close {
-  font-size: 24px;
+  font-size: 18px;
   position: absolute;
   top: 8px;
   right: 8px;
@@ -43,6 +45,9 @@
   // для светлой темы
   // color: $primary-color;
 
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+  }
   &:focus,
   &:hover {
     color: $accent-color-focus;
