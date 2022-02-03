@@ -1,5 +1,5 @@
 .hero {
-  // flex-grow: 1;
+  flex-grow: 1;
   padding-top: 20px;
   padding-bottom: 40px;
 
@@ -30,10 +30,12 @@
 }
 
 .library-foto {
-  height: 300px;
+  display: block;
+  background-position: top center;
+  height: 600px;
   background-position: 50% 20px;
   background-repeat: no-repeat;
-  background-image: url('https://raw.githubusercontent.com/NaThaleia/Film_collection/main/src/images/library-foto.jpg');
+  background-image: url('https://raw.githubusercontent.com/NaThaleia/Film_collection/main/src/images/hero/hero-img.jpg');
   @media screen and (min-width: 768px) {
     background-position: 50% 50%;
   }
