@@ -1,17 +1,36 @@
-.filmCard {
-  width: 280px;
-  animation-name: slideUp;
-  animation-duration: 1s;
-  animation-timing-function: ease;
-  padding-bottom: 5px;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+.invalid {
+  margin-bottom: 20px;
+}
 
+.invalid_text {
+  font-size: 14px;
+  margin-bottom: 15px;
   @media screen and (min-width: 768px) {
-    width: 294px;
+    font-size: 16px;
   }
 
   @media screen and (min-width: 1024px) {
-    width: 274px;
+    font-size: 18px;
+  }
+}
+
+.top-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+  justify-content: center;
+}
+
+.top-item {
+  margin: 10px;
+  width: calc((100% - 4 * 10px) / 2);
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 8 * 10px) / 4);
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: calc((100% - 10 * 10px) / 5);
   }
 
   &:hover,
@@ -25,10 +44,17 @@
 
   &__image {
     width: 100%;
-    height: 398px;
+    height: 202px;
     object-fit: cover;
     object-position: center;
     border-radius: 5px;
+    @media screen and (min-width: 768px) {
+      height: 232px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      height: 252px;
+    }
   }
 
   &__description {
@@ -37,14 +63,10 @@
 
   &__title {
     text-transform: uppercase;
-    color: #000;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 14px;
     margin-bottom: 3px;
     text-overflow: ellipsis;
     overflow: hidden;
-    //white-space: nowrap;
+    white-space: nowrap;
   }
 
   &__details {
@@ -56,7 +78,7 @@
   }
 
   &__rating {
-    margin-left: 11px;
+    margin-left: 8px;
     width: 36px;
     height: 16px;
     background-color: #ff6b08;
@@ -65,6 +87,5 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    line-height: 14px;
   }
 }
