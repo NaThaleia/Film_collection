@@ -21,7 +21,6 @@ export default function pageLoading(page = 1) {
       const settings = {
         page: data.page,
         fetch: 'Week',
-        place: 'home'
       };
       localStorage.setItem('page', JSON.stringify(settings));
       return data;
