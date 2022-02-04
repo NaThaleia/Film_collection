@@ -9,7 +9,7 @@ export default function onModalWatched(myCard, modalRefs) {
         return;
     }
         if (modalRefs.modalWatched.textContent === "remove from watched") {
-        removeCardToLS(myCard);
+        removeCardFromLS(myCard);
         modalRefs.modalWatched.textContent = "add to watched";
         modalRefs.modalWatched.classList.remove("selected");
         return;
@@ -18,7 +18,7 @@ export default function onModalWatched(myCard, modalRefs) {
         let watchedCards = [];
 
         if (JSON.parse(localStorage.getItem('library-watched')) === null) {
-            watchedCards.push(myCard);
+            watchedCards.unshift(myCard);
             localStorage.setItem('library-watched', JSON.stringify(watchedCards));
             return;
         }
@@ -30,7 +30,7 @@ export default function onModalWatched(myCard, modalRefs) {
         return;
     }
 }
-function removeCardToLS(myCard) {
+function removeCardFromLS(myCard) {
     const watchedCards = JSON.parse(localStorage.getItem('library-watched'));
     const indexInWatchedCards = watchedCards.findIndex(el => (el.id === myCard.id));
     console.log(indexInWatchedCards);
