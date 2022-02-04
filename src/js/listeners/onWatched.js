@@ -21,7 +21,6 @@ export default function onWatched(e, page = 1) {
   const settings = {
     page: page,
     fetch: 'Watched',
-    place: 'watched'
   };
 
   localStorage.setItem('page', JSON.stringify(settings));

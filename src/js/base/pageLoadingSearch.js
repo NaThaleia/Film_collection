@@ -27,7 +27,6 @@ export default function pageLoadingSearch(query, page = 1) {
         page: data.page,
         fetch: 'Search',
         query: query,
-        place: home
       };
       localStorage.setItem('page', JSON.stringify(settings));
       return data;

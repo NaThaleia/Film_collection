@@ -21,7 +21,6 @@ export default function onQueue(e, page = 1) {
   const settings = {
     page: page,
     fetch: 'Queue',
-    place: 'queue'
   };
 
   localStorage.setItem('page', JSON.stringify(settings));
