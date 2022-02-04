@@ -1,0 +1,21 @@
+{{#each this}}
+  <li class='top-item' data-id='{{id}}'>
+    <img
+      class='top-item__image'
+      {{#if poster_path}}
+      src='https://image.tmdb.org/t/p/w500{{poster_path}}'
+      alt='movie {{original_title}}'
+      {{else}}
+      src='https://raw.githubusercontent.com/NaThaleia/Film_collection/main/src/images/film-card.jpg'
+      alt='film'
+      {{/if}}      
+    />
+    <div class='top-item__description'>
+      <p class='top-item__title' title='{{original_title}}'>{{original_title}}</p>
+      <div class='top-item__details'>
+        <p class='top-item__сategory'>{{release_date}}</p>
+        <p class='top-item__rating'>{{vote_average}}</p>
+      </div>
+    </div>
+  </li>
+{{/each}}
