@@ -18,4 +18,5 @@ export const refs = {
   paginationNext: document.querySelector('.arrow_right'),
   nIceTeam: document.querySelector('.team-modal-btn'),
   modalSearch: document.querySelector('.backdrop-modal-form'),
+  top: document.querySelector('.top-list'),
 };
