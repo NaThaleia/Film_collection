@@ -17,12 +17,12 @@ export default function onModalQueue(myCard, modalRefs) {
         let queueCards = [];
     
         if (JSON.parse(localStorage.getItem('library-queue')) === null) {
-            queueCards.push(myCard);
+            queueCards.unshift(myCard); // в начало массива
             localStorage.setItem('library-queue', JSON.stringify(queueCards));
             return;
         }
         queueCards = JSON.parse(localStorage.getItem('library-queue'));
-        queueCards.push(myCard);
+        queueCards.unshift(myCard); // в начало массива
 
         localStorage.setItem('library-queue', JSON.stringify(queueCards));
     
