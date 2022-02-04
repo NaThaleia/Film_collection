@@ -1,0 +1,74 @@
+// Go to the dark site
+
+// .dark {
+.team-modal__container {
+  background: $main-color;
+}
+.team-modal__close {
+  color: $primary-color;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+}
+.team-modal__data {
+  color: $primary-color;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+}
+body {
+  background: #121212;
+}
+
+.header {
+  filter: drop-shadow(4px 4px 4px rgba(140, 140, 140, 0.6));
+  box-shadow: 0 0 20px hsl(0deg 0% 55% / 50%);
+}
+.theme-switch {
+  filter: drop-shadow(4px 4px 4px rgba(140, 140, 140, 0.6));
+}
+.team-modal__caption {
+  color: $accent-color-focus;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+}
+.filmCard {
+  color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px hsl(0deg 0% 55% / 50%);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 20px rgb(250 119 12 / 90%);
+  }
+  .filmCard__title {
+    color: $main-color;
+    filter: drop-shadow(4px 4px 4px rgba(140, 140, 140, 0.6));
+  }
+}
+.library-foto {
+  background-color: $main-color;
+  filter: drop-shadow(4px 4px 4px rgba(140, 140, 140, 0.6));
+  box-shadow: 0 0 20px hsl(0deg 0% 55% / 50%);
+}
+.footer {
+  box-shadow: 0 0 20px hsl(0deg 0% 55% / 50%);
+}
+.pagination__wrapper_pages {
+  box-shadow: 0 0 20px hsl(0deg 0% 55% / 50%);
+  filter: drop-shadow(4px 4px 4px rgba(140, 140, 140, 0.6));
+}
+.orange {
+  box-shadow: 0 8px 43px rgb(255 107 1 / 60%);
+}
+.page.active {
+  box-shadow: 0 8px 43px rgb(255 107 1 / 60%);
+}
+.library-foto {
+  display: block;
+  background-position: top center;
+  height: 500px;
+  background-position: 50% 20px;
+  background-repeat: no-repeat;
+  background-image: url('https://raw.githubusercontent.com/NaThaleia/Film_collection/main/src/images/hero.jpg');
+  @media screen and (min-width: 768px) {
+    height: 600px;
+    background-position: 50% 50%;
+    background-image: url('https://raw.githubusercontent.com/NaThaleia/Film_collection/main/src/images/hero.jpg');
+  }
+}
+// }
