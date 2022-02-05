@@ -65,8 +65,7 @@
 .fa-heart {
   color: $accent-color;
   &:hover,
-  &:focus,
-  &:active {
+  &:focus {
     animation: beat 0.25s infinite alternate;
     transform-origin: center;
   }

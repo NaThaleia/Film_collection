@@ -103,14 +103,30 @@
   font-weight: 500;
   font-size: 30px;
   line-height: 1.17;
-  color: #ffffff;
-  // letter-spacing: 1px;
-  // margin-top: 2px;
+  color: $main-color;
 
   @media (min-width: 768px) {
     display: block;
+    &:focus,
+    &:hover {
+      animation: Glow 0.5s ease infinite alternate;
+    }
   }
 }
+
+@keyframes Glow {
+  from {
+    text-shadow: 0 0 10px $main-color, 0 0 20px $main-color, 0 0 30px $main-color,
+      0 0 40px $accent-color-focus, 0 0 70px $accent-color-focus, 0 0 80px $accent-color-focus,
+      0 0 100px $accent-color-focus, 0 0 150px $accent-color-focus;
+  }
+  to {
+    text-shadow: 0 0 5px $main-color, 0 0 10px $main-color, 0 0 15px $main-color,
+      0 0 20px $accent-color-focus, 0 0 35px $accent-color-focus, 0 0 40px $accent-color-focus,
+      0 0 50px $accent-color-focus, 0 0 75px $accent-color-focus;
+  }
+}
+
 .header__navList {
   display: flex;
   list-style: none;
@@ -123,7 +139,7 @@
 
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
-  color: #ffffff;
+  color: $main-color;
   padding: 0;
   background: none;
   border: none;
@@ -232,13 +248,13 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
-  color: #ffffff;
+  color: $main-color;
   border: none;
-  border-bottom: 0.5px solid #ffffff;
+  border-bottom: 0.5px solid $main-color;
 
   &::placeholder {
     text-align: left;
-    color: #ffffff;
+    color: $main-color;
     padding-left: 3px;
   }
 
@@ -260,7 +276,7 @@
   height: 37px;
   cursor: pointer;
   background: url(../images/search2.png) 50% no-repeat;
-  color: #ffffff;
+  color: $main-color;
   border: none;
   &:hover {
     opacity: 0.8;
@@ -300,9 +316,9 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 1.333;
-  color: #ffffff;
+  color: $main-color;
   background-color: inherit;
-  border: 1px solid #ffffff;
+  border: 1px solid $main-color;
   text-transform: uppercase;
   cursor: pointer;
 
@@ -332,7 +348,7 @@
 }
 
 .theme-switch__icon {
-  fill: #ffffff;
+  fill: $main-color;
   height: 25px;
   width: 25px;
   margin-right: 8px;
@@ -340,14 +356,14 @@
 }
 
 .theme-switch__icon-moon {
-  fill: #ffffff;
+  fill: $main-color;
   height: 25px;
   width: 25px;
   //margin-right: 0px;
   margin-left: 8px;
 }
 .theme-switch__icon-sun {
-  fill: #ffffff;
+  fill: $main-color;
   height: 25px;
   width: 25px;
   margin-right: 8px;
@@ -393,7 +409,7 @@
 
 .theme-switch__marker {
   position: relative;
-  background-color: #fff;
+  background-color: $main-color;
   width: 13px;
   height: 13px;
   border-radius: 50%;
