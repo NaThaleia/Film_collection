@@ -78,4 +78,8 @@
     color: $main-color;
     filter: drop-shadow(4px 4px 4px rgba(140, 140, 140, 0.6));
   }
+  .invalid_text,
+  .top-item__title {
+    color: $main-color;
+  }
 }
