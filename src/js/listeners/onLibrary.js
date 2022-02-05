@@ -4,6 +4,8 @@ import onWatched from './onWatched';
 
 export default function onLibrary(e) {
   refs.hero.innerHTML = '';
+  refs.invalidList.innerHTML = '';
+  refs.invalid.classList.add('hidden');
 
   onLibraryChangeClass();
   onWatched();

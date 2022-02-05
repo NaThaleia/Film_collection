@@ -3,11 +3,10 @@ import { refs } from './js/base/refs';
 import eventListener from './js/base/eventListeners';
 import pageLoading from './js/base/pageLoading';
 import fetchApiGenresList from './js/fetch/fetchApiGenresList';
-import { Block } from 'notiflix/build/notiflix-block-aio';
+import theme from './js/base/theme';
 
 function start() {
-
-  // Block.hourglass('.hero');
+  theme();
   fetchApiGenresList();
   pageLoading();
   eventListener(refs);

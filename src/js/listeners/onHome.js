@@ -5,7 +5,8 @@ import onHomeChangeClass from '../changeClassHeder/cnangeClassToHome';
 export default function onHome(evt) {
   refs.searchHeaderInput.value = '';
   refs.hero.innerHTML = '';
-  
+  refs.invalidList.innerHTML = '';
+  refs.invalid.classList.add('hidden');
 
   pageLoading();
   onHomeChangeClass();

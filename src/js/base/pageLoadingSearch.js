@@ -1,5 +1,6 @@
 import { refs } from './refs';
 import fetchApiSearch from '../fetch/fetchApiSearch';
+import pageLoadingInvalid from './pageLoadingInvalid';
 import renderCardsHero from './renderCardsHero';
 import renderPagination from './renderPagination';
 import { spinner } from './spinner';
@@ -10,9 +11,14 @@ export default function pageLoadingSearch(query, page = 1) {
   fetchApiSearch(query, page)
     .then(data => {
       if (!data.total_results) {
+        spinner('stop');
         refs.searchErrors.classList.remove('is-hidden');
         refs.pagination.classList.add('hidden');
-        spinner('stop');
+        refs.invalid.classList.remove('hidden');
+        pageLoadingInvalid();
+        setTimeout(() => {
+          refs.searchErrors.classList.add('is-hidden');
+        }, 5000);
         throw new Error(response.status);
         // return data;
       }

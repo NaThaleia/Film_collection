@@ -3,7 +3,7 @@ import modal from '../templates/modal.hbs';
 import { refs } from '../base/refs';
 
 export default function onHero(e) {
-  e.preventDefault();
+  // e.preventDefault();
 
   if (e.target.className === 'hero' || e.target.nodeName === 'UL') return; // Мимо
   const target = e.target.closest('.filmCard');
