@@ -9,9 +9,9 @@ export default function onSearchMovie(e) {
 
   const query = e.target[0].value.trim();
   if (!query) {
-    refs.searchErrors.classList.remove('is-hidden');
-    refs.hero.innerHTML = '';
-    refs.pagination.classList.add('hidden');
+    // refs.searchErrors.classList.remove('is-hidden');
+    // refs.hero.innerHTML = '';
+    // refs.pagination.classList.add('hidden');
     return;
   }
   refs.hero.innerHTML = '';
