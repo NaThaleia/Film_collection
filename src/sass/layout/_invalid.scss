@@ -17,6 +17,7 @@
 .not-find {
   font-size: 16px;
   font-weight: 700;
+  margin-bottom: 10px;
 
   @media screen and (min-width: 768px) {
     font-size: 18px;
@@ -62,7 +63,7 @@
 
   &__image {
     width: 100%;
-    height: 202px;
+    height: 222px;
     object-fit: cover;
     object-position: center;
     border-radius: 5px;
