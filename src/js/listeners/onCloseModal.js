@@ -1,4 +1,4 @@
-import { refs } from '../base/refs';
+import { refs, modalRefs } from '../base/refs';
 import onModalEscKeyPress from './onModalEscKeyPress';
 import onBackdropClick from './onBackdropClick';
 import onModalWatched from './onModalWatched';
@@ -8,17 +8,17 @@ import onWatched from './onWatched';
 
 export default function onCloseModal() {
   console.log('Закрыть модалку');
-  const modalWatched = document.querySelector('.modal-watched');
-  const modalQueue = document.querySelector('.modal-queue');
-  const modalClose = document.querySelector('.modal-close');
+  // const modalWatched = document.querySelector('.modal-watched');
+  // const modalQueue = document.querySelector('.modal-queue');
+  // const modalClose = document.querySelector('.modal-close');
 
-  modalWatched.removeEventListener('click', onModalWatched);
-  modalQueue.removeEventListener('click', onModalQueue);
-  modalClose.removeEventListener('click', onCloseModal);
+  modalRefs.modalWatched.removeEventListener('click', onModalWatched);
+  modalRefs.modalQueue.removeEventListener('click', onModalQueue);
+  modalRefs.modalClose.removeEventListener('click', onCloseModal);
 
-  refs.modalSearch.classList.add('is-hidden-modal-form');
+  modalRefs.modalSearch.classList.add('is-hidden-modal-form');
   window.removeEventListener('keydown', onModalEscKeyPress);
-  refs.modalSearch.removeEventListener('click', onBackdropClick);
+  modalRefs.modalSearch.removeEventListener('click', onBackdropClick);
   document.body.style.overflow = '';
 
   /* начало */

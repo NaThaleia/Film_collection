@@ -1,4 +1,4 @@
-import { refs } from "../base/refs";
+import { refs, myCard, modalRefs} from "../base/refs";
 import { watchedCheck, queueCheck } from "../modal/buttonsCheck";
 
 import onModalEscKeyPress from './onModalEscKeyPress';
@@ -7,25 +7,25 @@ import onBackdropClick from "./onBackdropClick";
 import onModalQueue from "./onModalQueue";
 import onCloseModal from './onCloseModal';
 
-export default function onOpenModal(myCard) {
+export default function onOpenModal() {
     console.log('Открываем модалку');
+
+    modalRefs.modalSearch = document.querySelector('.backdrop-modal-form');
+    modalRefs.modalWatched = document.querySelector('.modal-watched');
+    modalRefs.modalQueue = document.querySelector('.modal-queue');
+    modalRefs.modalClose = document.querySelector('.modal-close');
     
-    const modalRefs = {
-        modalWatched: document.querySelector('.modal-watched'),
-        modalQueue: document.querySelector('.modal-queue'),
-        modalClose: document.querySelector('.modal-close')
-    }
-    refs.modalSearch.addEventListener('click', onBackdropClick);
-    refs.modalSearch.classList.remove('is-hidden-modal-form');
+    modalRefs.modalSearch.addEventListener('click', onBackdropClick);
+    modalRefs.modalSearch.classList.remove('is-hidden-modal-form');
     window.addEventListener('keydown', onModalEscKeyPress);
     document.body.style.overflow = "hidden";
 
-    watchedCheck(myCard.id, modalRefs);
-    queueCheck(myCard.id, modalRefs);
+    watchedCheck(myCard.data.id, modalRefs);
+    queueCheck(myCard.data.id, modalRefs);
     
-    modalRefs.modalWatched.addEventListener('click', () => onModalWatched(myCard, modalRefs));
-    modalRefs.modalQueue.addEventListener('click', () => onModalQueue(myCard, modalRefs));
-    modalRefs.modalClose.addEventListener('click', () => onCloseModal(modalRefs));
+    modalRefs.modalWatched.addEventListener('click', onModalWatched);
+    modalRefs.modalQueue.addEventListener('click', onModalQueue);
+    modalRefs.modalClose.addEventListener('click', onCloseModal);
    
     return;
 }
