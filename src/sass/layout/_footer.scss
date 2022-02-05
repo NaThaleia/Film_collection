@@ -46,6 +46,7 @@
   text-decoration: underline;
   border-radius: 5px;
   color: $secondary-color;
+
   &:hover,
   &:focus {
     border-color: $accent-color;
@@ -64,8 +65,7 @@
 .fa-heart {
   color: $accent-color;
   &:hover,
-  &:focus,
-  &:active {
+  &:focus {
     animation: beat 0.25s infinite alternate;
     transform-origin: center;
   }

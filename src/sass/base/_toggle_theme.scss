@@ -40,11 +40,13 @@
       filter: drop-shadow(4px 4px 4px rgba(140, 140, 140, 0.6));
     }
   }
-  .library-foto {
-    background-color: $main-color;
-    filter: drop-shadow(4px 4px 4px rgba(140, 140, 140, 0.6));
-    box-shadow: 0 0 20px hsl(0deg 0% 55% / 50%);
+  .team-modal__close {
+    &:focus,
+    &:hover {
+      color: $accent-color-focus;
+    }
   }
+
   .footer {
     box-shadow: 0 0 20px hsl(0deg 0% 55% / 50%);
   }
@@ -59,6 +61,9 @@
     box-shadow: 0 8px 43px rgb(255 107 1 / 60%);
   }
   .library-foto {
+    background-color: $main-color;
+    filter: drop-shadow(4px 4px 4px rgba(140, 140, 140, 0.6));
+    box-shadow: 0 0 20px hsl(0deg 0% 55% / 50%);
     display: block;
     background-position: top center;
     height: 500px;
@@ -68,5 +73,9 @@
       height: 600px;
       background-image: url('https://raw.githubusercontent.com/NaThaleia/Film_collection/main/src/images/hero.jpg');
     }
+  }
+  .empty-text {
+    color: $main-color;
+    filter: drop-shadow(4px 4px 4px rgba(140, 140, 140, 0.6));
   }
 }
