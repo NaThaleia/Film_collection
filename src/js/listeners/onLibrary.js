@@ -6,6 +6,7 @@ export default function onLibrary(e) {
   refs.hero.innerHTML = '';
   refs.invalidList.innerHTML = '';
   refs.invalid.classList.add('hidden');
+  refs.empty.classList.add('hidden');
 
   onLibraryChangeClass();
   onWatched();
