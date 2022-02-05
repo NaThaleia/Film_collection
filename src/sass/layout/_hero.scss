@@ -42,3 +42,16 @@
     background-image: url('https://raw.githubusercontent.com/NaThaleia/Film_collection/main/src/images/hero/hero-img.jpg');
   }
 }
+.empty-text {
+  color: $primary-color;
+  line-height: 1.4;
+  position: absolute;
+  z-index: 1;
+  transform: translate(0, -40%);
+  text-shadow: 0 0 10px $background-color, 0 0 20px $background-color, 0 0 30px $background-color,
+    0 0 40px $background-color;
+  filter: drop-shadow(4px 4px 4px rgba(140, 140, 140, 0.6));
+  @media screen and (min-width: 768px) {
+    transform: translate(0, -120%);
+  }
+}
