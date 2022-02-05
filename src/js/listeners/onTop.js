@@ -1,4 +1,4 @@
-import { refs } from '../base/refs';
+import { modalRefs } from '../base/refs';
 import onOpenModal from './onOpenModal';
 import modal from '../templates/modal.hbs';
 
@@ -9,7 +9,7 @@ export default function onTop(e) {
   const myCard = JSON.parse(localStorage.getItem('cards')).find(el => el.id == myCardId);
 
   const modalMarkup = modal(myCard); // создаём макет
-  refs.modalSearch.innerHTML = modalMarkup; // пихаем в дом
+  modalRefs.modalSearch.innerHTML = modalMarkup; // пихаем в дом
 
   onOpenModal(myCard);
 }
