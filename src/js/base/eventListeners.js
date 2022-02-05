@@ -1,14 +1,12 @@
 import onHome from '../listeners/onHome';
 import onLibrary from '../listeners/onLibrary';
 import onSearchMovie from '../listeners/onSearchMovie';
+import onThemeSwitch from '../listeners/onThemeSwitch';
+import onTop from '../listeners/onTop';
 import onHero from '../listeners/onHero';
 import onWatched from '../listeners/onWatched';
 import onQueue from '../listeners/onQueue';
 import onTeamModal from '../listeners/onTeamModal';
-import onOpenModal from '../listeners/onOpenModal';
-import onCloseModal from '../listeners/onCloseModal';
-import onBackdropClick from '../listeners/onBackdropClick';
-import onModalEscKeyPress from '../listeners/onModalEscKeyPress';
 import onLoadingNextPage from '../listeners/onLoadingNextPage';
 
 export default function eventListeners(refs) {
@@ -21,19 +19,27 @@ export default function eventListeners(refs) {
     watchedBtnHeader,
     queueBtnHeader,
     nIceTeam,
-    modalClose,
-    modalSearch,
     pagination,
+    invalidList,
+    themeSwitch,
   } = refs;
-  homeBtnHeader.addEventListener('click', onHome);
+
+  /* HEADER */
   headerLogo.addEventListener('click', onHome);
+  homeBtnHeader.addEventListener('click', onHome);
   libraryBtnHeader.addEventListener('click', onLibrary);
   searchMovie.addEventListener('submit', onSearchMovie);
-  // hero.addEventListener('click', onHero);
   watchedBtnHeader.addEventListener('click', onWatched);
   queueBtnHeader.addEventListener('click', onQueue);
+  themeSwitch.addEventListener('change', onThemeSwitch);
+
+  /* MAIN */
+  invalidList.addEventListener('click', onTop);
   hero.addEventListener('click', onHero);
-  nIceTeam.addEventListener('click', onTeamModal);
+
+  /* PAGINATION */
   pagination.addEventListener('click', onLoadingNextPage);
- 
+
+  /* FOOTER */
+  nIceTeam.addEventListener('click', onTeamModal);
 }

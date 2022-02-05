@@ -1,5 +1,5 @@
 import { refs } from './refs';
-import CardsHero from '../templates/heroCards.hbs';
+import cardsHero from '../templates/heroCards.hbs';
 
 export default function renderCardsHero(arr) {
   refs.hero.classList.remove('library-foto');
@@ -8,7 +8,7 @@ export default function renderCardsHero(arr) {
 
   // localStorage.setItem('cards', JSON.stringify(arrNewGenres));
 
-  const cards = CardsHero(arrNewGenres);
+  const cards = cardsHero(arrNewGenres);
 
   refs.hero.insertAdjacentHTML('beforeend', cards);
 }

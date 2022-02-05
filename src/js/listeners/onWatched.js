@@ -21,17 +21,16 @@ export default function onWatched(e, page = 1) {
   const settings = {
     page: page,
     fetch: 'Watched',
-    cardsQtty: arr.length,
   };
 
-  settings.pages = Math.ceil(arr.length / PAGE_SIZE);
-  const position = (page - 1) * PAGE_SIZE;
-
   localStorage.setItem('page', JSON.stringify(settings));
+
+  const totalPage = Math.ceil(arr.length / PAGE_SIZE);
+  const position = (page - 1) * PAGE_SIZE;
 
   arr = arr.splice(position, PAGE_SIZE);
   localStorage.setItem('cards', JSON.stringify(arr));
 
   renderCardsHero(arr);
-  renderPagination(settings.pages, page);
+  renderPagination(totalPage, page);
 }
