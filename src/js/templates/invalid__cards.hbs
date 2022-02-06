@@ -1,13 +1,13 @@
 {{#each this}}
   <li class='top-item' data-id='{{id}}'>
     <img
-    class="lazyload blur-up"
-      class='top-item__image'
+     class='top-item__image'
       {{#if poster_path}}
-      data-src='https://image.tmdb.org/t/p/w500{{poster_path}}'
+      src='https://image.tmdb.org/t/p/w500{{poster_path}}'
+      loading="lazy"
       alt='movie {{original_title}}'
       {{else}}
-      data-src='https://raw.githubusercontent.com/NaThaleia/Film_collection/main/src/images/film-card.jpg'
+      src='https://raw.githubusercontent.com/NaThaleia/Film_collection/main/src/images/film-card.jpg'
       alt='film'
       {{/if}}      
     />
