@@ -1,12 +1,11 @@
 import { refs } from '../base/refs';
 
-export default function onLibraryChangeClass(evt) {
+export default function onLibraryChangeClass() {
   if (!refs.libraryBtnHeader.classList.contains('current')) {
     refs.libraryBtnHeader.classList.add('current');
     refs.homeBtnHeader.classList.remove('current');
     console.log(`add class`);
-    }
-    
+  }
 
   if (!refs.header.classList.contains('header_imageLibrery')) {
     refs.header.classList.add('header_imageLibrery');

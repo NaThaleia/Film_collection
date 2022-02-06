@@ -30,7 +30,7 @@ export const refs = {
   nIceTeam: document.querySelector('.team-modal-btn'),
 
   /* MODAL */
-  // modalSearch: document.querySelector('.backdrop-modal-form'),
+  modalSearch: document.querySelector('.backdrop-modal-form'),
 };
 
 /* MODAL */

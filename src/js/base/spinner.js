@@ -1,14 +1,8 @@
-// import { refs } from './refs';
-// import { Block } from 'notiflix/build/notiflix-block-aio';
-
-// Block.hourglass('.js-element');
-
-
 export const spinner = function (value) {
-    const spinner = {
-        spinnerRef: document.querySelector('.loader'),
+  const spinner = {
+    spinnerRef: document.querySelector('.loader'),
 
-        markup: `<div class="atom-spinner">
+    markup: `<div class="atom-spinner">
   <div class="spinner-inner">
     <div class="spinner-line"></div>
     <div class="spinner-line"></div>
@@ -18,18 +12,18 @@ export const spinner = function (value) {
   </div>
 </div>`,
 
-        show() {
-            this.spinnerRef.innerHTML = '';
-            this.spinnerRef.insertAdjacentHTML('beforeend', this.markup);
-        },
+    show() {
+      this.spinnerRef.innerHTML = '';
+      this.spinnerRef.insertAdjacentHTML('beforeend', this.markup);
+    },
 
-        hide() {
-            this.spinnerRef.innerHTML = '';
-        },
-    };
-    if (value === 'start') {
-        spinner.show();
-    } else if (value === 'stop') {
-        spinner.hide();
-    }
+    hide() {
+      this.spinnerRef.innerHTML = '';
+    },
+  };
+  if (value === 'start') {
+    spinner.show();
+  } else if (value === 'stop') {
+    spinner.hide();
+  }
 };
