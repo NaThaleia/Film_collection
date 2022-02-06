@@ -26,6 +26,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/basiclightbox@5/dist/basicLightbox.min.css"
     />
+    
   </head>
   <body>
     <!-- Тут подключены паршалы HTML. -->
@@ -37,10 +38,16 @@
     <include src="./partials/footer.html"></include>
     <include src="./partials/search-modal.html"></include>
 
-    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
+    
+    <!-- Lazysizes library script file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+      integrity="sha512-q583ppKrCRc7N5O0n2nzUiJ+suUv7Et1JGels4bXOaMFQcamPk9HjdUknZuuFjBNs7tsMuadge5k9RzdmO+1GQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>
 
     <!-- Тут подключен сайт с иконками -->
+    
     <script src="https://kit.fontawesome.com/8dd08c9aad.js" crossorigin="anonymous"></script>
     <script src="../src/js/trash/back-to-top.js"></script>
   </body>
