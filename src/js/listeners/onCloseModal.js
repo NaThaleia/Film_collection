@@ -2,7 +2,7 @@ import { refs, modalRefs } from '../base/refs';
 import onModalEscKeyPress from './onModalEscKeyPress';
 import onBackdropClick from './onBackdropClick';
 import onModalWatched from './onModalWatched';
-import onModalQueue from './onModalQueue';
+// import onModalQueue from './onModalQueue';
 import onQueue from './onQueue';
 import onWatched from './onWatched';
 
@@ -13,7 +13,7 @@ export default function onCloseModal() {
   // const modalClose = document.querySelector('.modal-close');
 
   modalRefs.modalWatched.removeEventListener('click', onModalWatched);
-  modalRefs.modalQueue.removeEventListener('click', onModalQueue);
+  modalRefs.modalQueue.removeEventListener('click', onModalWatched);
   modalRefs.modalClose.removeEventListener('click', onCloseModal);
 
   modalRefs.modalSearch.classList.add('is-hidden-modal-form');

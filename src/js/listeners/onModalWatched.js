@@ -1,50 +1,46 @@
 import { modalRefs, myCard } from "../base/refs";
-export default function onModalWatched(evt) {
+export default function onModalBtn(evt) {
   console.log('onModalWatched in process');
-  let btn = "";
-  let source = "";
 
+  let btn = "";
+  let btnName = "";
+// Какая кнопка нажата: "Watched" или "Queue" ?
   if (evt.currentTarget.classList.contains("modal-watched")) {
     btn = "modalWatched";
-    source = "library-watched";
+    btnName = "watched";
   }
   if (evt.currentTarget.classList.contains("modal-queue")) {
     btn = "modalQueue";
-    source = "library-queue";
+    btnName = "queue";
   }
-  // Проверка, есть ли этот фильм в Watched
-  if (modalRefs[btn].textContent === 'add to queue' || modalRefs[btn].textContent === 'add to watched') {
-    addCardToLS(source);
-    modalRefs[btn].textContent = 'remove from watched';
+  // Проверка, есть ли этот фильм в Watched или Queue
+  if (modalRefs[btn].textContent === `add to ${btnName}`) {
+    // если да - добавляем в нужную библиотеку
+    addCardToLS(`library-${btnName}`);
+    modalRefs[btn].textContent = `remove from ${btnName}`;
     modalRefs[btn].classList.add('selected');
     return;
   }
-
-  removeCardFromLS(source);
-  modalRefs[btn].textContent = 'add to watched';
+  // иначе - удаляем из нужной библиотеки
+  removeCardFromLS(`library-${btnName}`);
+  modalRefs[btn].textContent = `add to ${btnName}`;
   modalRefs[btn].classList.remove('selected');
   return;
-
 }
 
-function addCardToLS(source) {
-  let watchedCards = [];
-
-  if (JSON.parse(localStorage.getItem(source)) === null) {
-    watchedCards.unshift(myCard.data);
-    localStorage.setItem(source, JSON.stringify(watchedCards));
-    return;
+function addCardToLS(lib) {
+  let cards = [];
+// проверка - если фильм уже был добавлен, берём данные
+  if (JSON.parse(localStorage.getItem(lib)) !== null) {
+    cards = JSON.parse(localStorage.getItem(lib));
   }
-  watchedCards = JSON.parse(localStorage.getItem(source));
-  watchedCards.unshift(myCard.data);
-
-  localStorage.setItem(source, JSON.stringify(watchedCards));
+  cards.unshift(myCard.data); 
+  localStorage.setItem(lib, JSON.stringify(cards));
 }
 
-function removeCardFromLS(source) {
-  const watchedCards = JSON.parse(localStorage.getItem(source));
-  const indexInWatchedCards = watchedCards.findIndex(el => el.id === myCard.data.id);
-  watchedCards.splice(indexInWatchedCards, 1);
-
-  localStorage.setItem(source, JSON.stringify(watchedCards));
+function removeCardFromLS(lib) {
+  const cards = JSON.parse(localStorage.getItem(lib));
+  const indexOfCards = cards.findIndex(el => el.id === myCard.data.id);
+  cards.splice(indexOfCards, 1);
+  localStorage.setItem(lib, JSON.stringify(cards));
 }
