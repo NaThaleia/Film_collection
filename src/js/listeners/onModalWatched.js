@@ -1,43 +1,50 @@
 import { modalRefs, myCard } from "../base/refs";
-
-export default function onModalWatched() {
+export default function onModalWatched(evt) {
   console.log('onModalWatched in process');
+  let btn = "";
+  let source = "";
 
+  if (evt.currentTarget.classList.contains("modal-watched")) {
+    btn = "modalWatched";
+    source = "library-watched";
+  }
+  if (evt.currentTarget.classList.contains("modal-queue")) {
+    btn = "modalQueue";
+    source = "library-queue";
+  }
   // Проверка, есть ли этот фильм в Watched
-  if (modalRefs.modalWatched.textContent === 'add to watched') {
-    addCardToLS();
-    modalRefs.modalWatched.textContent = 'remove from watched';
-    modalRefs.modalWatched.classList.add('selected');
+  if (modalRefs[btn].textContent === 'add to queue' || modalRefs[btn].textContent === 'add to watched') {
+    addCardToLS(source);
+    modalRefs[btn].textContent = 'remove from watched';
+    modalRefs[btn].classList.add('selected');
     return;
   }
 
-  if (modalRefs.modalWatched.textContent === 'remove from watched') {
-    removeCardFromLS();
-    modalRefs.modalWatched.textContent = 'add to watched';
-    modalRefs.modalWatched.classList.remove('selected');
-    return;
-  }
+  removeCardFromLS(source);
+  modalRefs[btn].textContent = 'add to watched';
+  modalRefs[btn].classList.remove('selected');
+  return;
+
 }
 
-function addCardToLS() {
+function addCardToLS(source) {
   let watchedCards = [];
 
-  if (JSON.parse(localStorage.getItem('library-watched')) === null) {
+  if (JSON.parse(localStorage.getItem(source)) === null) {
     watchedCards.unshift(myCard.data);
-    localStorage.setItem('library-watched', JSON.stringify(watchedCards));
+    localStorage.setItem(source, JSON.stringify(watchedCards));
     return;
   }
-  watchedCards = JSON.parse(localStorage.getItem('library-watched'));
+  watchedCards = JSON.parse(localStorage.getItem(source));
   watchedCards.unshift(myCard.data);
 
-  localStorage.setItem('library-watched', JSON.stringify(watchedCards));
+  localStorage.setItem(source, JSON.stringify(watchedCards));
 }
 
-function removeCardFromLS() {
-  const watchedCards = JSON.parse(localStorage.getItem('library-watched'));
+function removeCardFromLS(source) {
+  const watchedCards = JSON.parse(localStorage.getItem(source));
   const indexInWatchedCards = watchedCards.findIndex(el => el.id === myCard.data.id);
-  console.log(indexInWatchedCards);
   watchedCards.splice(indexInWatchedCards, 1);
 
-  localStorage.setItem('library-watched', JSON.stringify(watchedCards));
+  localStorage.setItem(source, JSON.stringify(watchedCards));
 }

@@ -24,7 +24,7 @@ export default function onOpenModal() {
     queueCheck(myCard.data.id, modalRefs);
     
     modalRefs.modalWatched.addEventListener('click', onModalWatched);
-    modalRefs.modalQueue.addEventListener('click', onModalQueue);
+    modalRefs.modalQueue.addEventListener('click', onModalWatched);
     modalRefs.modalClose.addEventListener('click', onCloseModal);
    
     return;
