@@ -7,6 +7,7 @@ export default function onHome(evt) {
   refs.hero.innerHTML = '';
   refs.invalidList.innerHTML = '';
   refs.invalid.classList.add('hidden');
+  refs.empty.classList.add('hidden');
 
   pageLoading();
   onHomeChangeClass();

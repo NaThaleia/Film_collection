@@ -7,6 +7,7 @@ import onLibraryChangeClassBtnQueue from '../changeClassHeder/changeClassLibrary
 export default function onQueue(e, page = 1) {
   onLibraryChangeClassBtnQueue();
   refs.hero.innerHTML = '';
+  refs.empty.classList.add('hidden');
 
   const PAGE_SIZE = 20;
   let arr = JSON.parse(localStorage.getItem('library-queue'));
@@ -14,6 +15,7 @@ export default function onQueue(e, page = 1) {
   if (!arr || !arr.length) {
     refs.pagination.classList.add('hidden');
     refs.hero.classList.add('library-foto');
+    refs.empty.classList.remove('hidden');
     console.log('not data');
     return;
   }
