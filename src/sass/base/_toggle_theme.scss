@@ -30,6 +30,7 @@
   .filmCard {
     color: rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 20px hsl(0deg 0% 55% / 50%);
+    border-radius: 5px;
 
     &:hover,
     &:focus {
