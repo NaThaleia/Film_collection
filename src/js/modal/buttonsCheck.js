@@ -1,19 +1,22 @@
-export function watchedCheck(myCardId, modalRefs) {
+export function buttonsCheck(myCardId, modalRef, library, textToChange) {
 
-    const libWatched = JSON.parse(localStorage.getItem('library-watched'));
-    if (!libWatched) return; // Если в ЛС пусто
-    const isHere = libWatched.find(el => (el.id == myCardId));
+  const libData = JSON.parse(localStorage.getItem(library));
+  
+  if (!libData) return; // Если в ЛС пусто
+  const isHere = libData.find(el => (el.id == myCardId));
   if (!isHere) return; // Если в ЛС нет такого кино
-  modalRefs.modalWatched.textContent = "remove from watched";
-  modalRefs.modalWatched.classList.add("selected"); 
-    return;
+
+ // проверяем соответств. кнопку
+  modalRef.textContent = `remove from ${textToChange}`;
+  modalRef.classList.add("selected");
 }
-export function queueCheck(myCardId, modalRefs) {
-    const libQueue = JSON.parse(localStorage.getItem('library-queue'));
-    if (!libQueue) return; // Если в ЛС пусто
-    const isHere = libQueue.find(el => (el.id == myCardId));
-    if (!isHere) return; // Если в ЛС нет такого кино
-  modalRefs.modalQueue.textContent = "remove from queue";
-  modalRefs.modalQueue.classList.add("selected");
-    return;
-}
+  
+// export function queueCheck(myCardId, modalRefs) {
+//     const libQueue = JSON.parse(localStorage.getItem('library-queue'));
+//     if (!libQueue) return; // Если в ЛС пусто
+//     const isHere = libQueue.find(el => (el.id == myCardId));
+//     if (!isHere) return; // Если в ЛС нет такого кино
+//   modalRefs.modalQueue.textContent = "remove from queue";
+//   modalRefs.modalQueue.classList.add("selected");
+//     return;
+// }
