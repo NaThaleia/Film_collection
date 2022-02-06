@@ -1,3 +1,4 @@
+// весь модуль можно удалить
 import { modalRefs, myCard } from "../base/refs";
 export default function onModalQueue () {
   console.log('onModalQueue in process');
