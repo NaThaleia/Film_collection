@@ -16,7 +16,7 @@ export default function onQueue(e, page = 1) {
 
   if (isArrEmpty(arr, refs)) return; // если нет карточек
 
-  putSettings(page, "Watched");
+  putSettings(page, "Queue");
 
   const [newArr, totalPage] = paginationDataCalc(arr, page, PAGE_SIZE);
 
