@@ -8,32 +8,55 @@ export default function onLoadingNextPage(e) {
   let nextPage = e.target.dataset.page;
   let currentPage = JSON.parse(localStorage.getItem('page'));
 
-  if (!nextPage) {
-    console.log('error');
-    return;
-  }
+  if (!nextPage) return;
 
   refs.hero.innerHTML = '';
-  if (nextPage === 'Previos') {
-    nextPage = parseInt(currentPage.page) - 1;
-  }
-  if (nextPage === 'Next') {
-    nextPage = parseInt(currentPage.page) + 1;
+
+  switch (nextPage) {
+    case 'Previos':
+      nextPage = parseInt(currentPage.page) - 1;
+      break;
+
+    case 'Next':
+      nextPage = parseInt(currentPage.page) + 1;
+      break;
+
+    case 'left':
+      nextPage = parseInt(currentPage.page) - 3;
+      break;
+
+    case 'right':
+      nextPage = parseInt(currentPage.page) + 3;
+      break;
+
+    case 'left-end':
+      nextPage = parseInt(currentPage.page) - 7; // исделано по инвалидному
+      break;
+
+    case 'right-end':
+      nextPage = parseInt(currentPage.page) + 6; // исделано по инвалидному
+      break;
+
+    default:
   }
 
-  if (currentPage.fetch === 'Week') {
-    pageLoading(parseInt(nextPage));
-  }
+  switch (currentPage.fetch) {
+    case 'Week':
+      pageLoading(parseInt(nextPage));
+      break;
 
-  if (currentPage.fetch === 'Search') {
-    pageLoadingSearch(currentPage.query, parseInt(nextPage));
-  }
+    case 'Search':
+      pageLoadingSearch(currentPage.query, parseInt(nextPage));
+      break;
 
-  if (currentPage.fetch === 'Watched') {
-    onWatched(e, parseInt(nextPage));
-  }
+    case 'Watched':
+      onWatched(parseInt(nextPage), parseInt(nextPage));
+      break;
 
-  if (currentPage.fetch === 'Queue') {
-    onQueue(e, parseInt(nextPage));
+    case 'Queue':
+      onQueue(parseInt(nextPage), parseInt(nextPage));
+      break;
+
+    default:
   }
 }
