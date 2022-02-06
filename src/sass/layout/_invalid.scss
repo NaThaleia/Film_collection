@@ -4,7 +4,7 @@
 
 .invalid_text {
   font-size: 14px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   @media screen and (min-width: 768px) {
     font-size: 16px;
   }
@@ -17,7 +17,7 @@
 .not-find {
   font-size: 16px;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 
   @media screen and (min-width: 768px) {
     font-size: 18px;
@@ -31,6 +31,9 @@
 .top {
   font-weight: 700;
   color: #ff6b08;
+  box-shadow: 0 0 20px rgb(250 119 12 / 90%);
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 .top-list {
