@@ -4,7 +4,7 @@ export default function theme() {
   const theme = JSON.parse(localStorage.getItem('theme'));
 
   switch (theme) {
-    case 'darck':
+    case 'dark':
       document.querySelector('html').classList.add('dark');
       refs.themeSwitch.checked = true;
       break;

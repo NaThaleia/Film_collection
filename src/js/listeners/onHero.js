@@ -3,8 +3,6 @@ import modal from '../templates/modal.hbs';
 import { modalRefs, myCard } from '../base/refs';
 
 export default function onHero(e) {
-  // e.preventDefault();
-
   if (e.target.className === 'hero' || e.target.nodeName === 'UL') return; // Мимо
   const target = e.target.closest('.filmCard');
 
@@ -25,6 +23,6 @@ export default function onHero(e) {
   const modalMarkup = modal(myCard.data); // создаём макет
   modalRefs.modalSearch.innerHTML = modalMarkup; // пихаем в дом
 
-  onOpenModal(myCard);
+  onOpenModal();
   return;
 }

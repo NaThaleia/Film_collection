@@ -1,9 +1,14 @@
 import { refs } from './refs';
 
+/* Функция renderPagination принимает два значения, общее кол-во страниц, отображает все строницы и выделяет страницу на которой находимся */
 export default function renderPagination(maxPage, currentPage) {
+  // не должно быть пустых или нулевых значений
+  if (!maxPage || !currentPage) {
+    refs.pagination.classList.add('hidden');
+    return;
+  }
+
   refs.pagination.classList.remove('hidden');
-  // console.log(maxPage);
-  // console.log(currentPage);
 
   /* очиска классов */
   refs.pagination.classList.remove('is-hidden');
@@ -22,6 +27,7 @@ export default function renderPagination(maxPage, currentPage) {
 
   const arrPage = []; // массив для промежуточных страниц
 
+  // значение относительно которого позицианируются точки
   const center = maxPage - 4;
 
   if (maxPage === 1) {
@@ -68,9 +74,9 @@ export default function renderPagination(maxPage, currentPage) {
         arrPage.push(`<div class="page" data-page="${i}">${i}</div>`);
       }
 
-      arrPage.push(`<div class="threeDots" >...</div>`);
+      arrPage.push(`<div class="threeDots" data-page='right-end'>...</div>`);
     } else if (5 < currentPage && currentPage < center) {
-      arrPage.push(`<div class="threeDots" >...</div>`);
+      arrPage.push(`<div class="threeDots" data-page='left'>...</div>`);
 
       for (let i = currentPage - 2; i < currentPage + 3; i += 1) {
         if (i === currentPage) {
@@ -80,9 +86,9 @@ export default function renderPagination(maxPage, currentPage) {
         arrPage.push(`<div class="page" data-page="${i}">${i}</div>`);
       }
 
-      arrPage.push(`<div class="threeDots" >...</div>`);
+      arrPage.push(`<div class="threeDots" data-page='right'>...</div>`);
     } else if (center <= currentPage) {
-      arrPage.push(`<div class="threeDots" >...</div>`);
+      arrPage.push(`<div class="threeDots" data-page='left-end'>...</div>`);
 
       for (let i = maxPage - 6; i < maxPage; i += 1) {
         if (i === currentPage) {

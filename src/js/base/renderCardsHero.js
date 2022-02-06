@@ -1,19 +1,19 @@
 import { refs } from './refs';
 import cardsHero from '../templates/heroCards.hbs';
 
+/* Функция renderCardsHero на входе принимает масси с бэкенда и череш шаблон формирует разметку блока Hero */
 export default function renderCardsHero(arr) {
   refs.hero.classList.remove('library-foto');
-  const arrNewYear = NewYear(arr); // в исходном массиве с fetch  меняем год и передаем дальше
-  const arrNewGenres = NewGenres(arrNewYear); // в исходном массиве с fetch  меняем жанр и передаем дальше
-
-  // localStorage.setItem('cards', JSON.stringify(arrNewGenres));
+  const arrNewYear = newYear(arr); // в исходном массиве с fetch  меняем год и передаем дальше
+  const arrNewGenres = newGenres(arrNewYear); // в исходном массиве с fetch  меняем жанр и передаем дальше
 
   const cards = cardsHero(arrNewGenres);
 
   refs.hero.insertAdjacentHTML('beforeend', cards);
 }
 
-function NewYear(arr) {
+/* Функция NewYear на входе принимает массив с бэкенда, на выходе  каждоб объекте массива сокращает дату до года */
+function newYear(arr) {
   return arr.map(e => {
     if (!e.release_date) return e;
     const release_date = e.release_date.slice(0, 4);
@@ -21,7 +21,8 @@ function NewYear(arr) {
   });
 }
 
-function NewGenres(arr) {
+/* Функция NewGenres на входе принимает массив с бэкенда, на выходе в каждома объекте массива изменяет жанр и округляет его */
+function newGenres(arr) {
   const arrGenresLs = JSON.parse(localStorage.getItem('genres'));
 
   const arrGenres = arr
