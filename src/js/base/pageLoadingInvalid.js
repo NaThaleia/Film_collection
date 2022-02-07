@@ -1,5 +1,5 @@
 import { refs } from './refs';
-import fetchApiDay from '../fetch/fetchApiDay';
+import { fetchApiDay } from '../fetch/fetchApi';
 import invalid__cards from '../templates/invalid__cards.hbs';
 
 /* Функция pageLoadingInvalid при ошибочном запросе рендерит первые 20 фильмов ТОП Day */
