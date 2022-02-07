@@ -67,3 +67,23 @@ export async function fetchApiSearch(query, page) {
     return error;
   }
 }
+
+/* для фильтра максимальная страница 500 */
+export async function fetchApiFilter(page = 1, genre = '', year = '') {
+  const options = {
+    params: {
+      api_key: API_KEY,
+      page: `${page}`, // отвечает за страницу (пример: 1), доступно первые 500 стр.
+      with_genres: `${genre}`, // отвечает за жарн (пример: 28)
+      primary_release_year: `${year}`, // отвечающий за год выпуска фильма (пример: 2020)
+      // year: `${year}`, // отвечает за фильмы выпущеные до этого года
+    },
+  };
+
+  try {
+    const response = await axios(`3/discover/movie`, options);
+    return response.data;
+  } catch (error) {
+    return error;
+  }
+}
