@@ -1,4 +1,4 @@
-import fetchApiWeek from '../fetch/fetchApiWeek';
+import { fetchApiWeek } from '../fetch/fetchApi';
 import renderCardsHero from './renderCardsHero';
 import renderPagination from './renderPagination';
 import { spinner } from './spinner';

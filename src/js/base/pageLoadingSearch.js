@@ -1,5 +1,5 @@
 import { refs } from './refs';
-import fetchApiSearch from '../fetch/fetchApiSearch';
+import { fetchApiSearch } from '../fetch/fetchApi';
 import pageLoadingInvalid from './pageLoadingInvalid';
 import renderCardsHero from './renderCardsHero';
 import renderPagination from './renderPagination';
