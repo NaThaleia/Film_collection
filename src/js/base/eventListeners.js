@@ -8,7 +8,8 @@ import onWatched from '../listeners/onWatched';
 import onQueue from '../listeners/onQueue';
 import onTeamModal from '../listeners/onTeamModal';
 import onLoadingNextPage from '../listeners/onLoadingNextPage';
-import onFilter from '../listeners/onFilterBtn';
+import onFilterBtn from '../listeners/onFilterBtn';
+import onFilter from '../listeners/onFilter';
 
 export default function eventListeners(refs) {
   const {
@@ -24,6 +25,7 @@ export default function eventListeners(refs) {
     invalidList,
     themeSwitch,
     filterBtnHeader,
+    filterContainer,
   } = refs;
 
   /* HEADER */
@@ -34,7 +36,9 @@ export default function eventListeners(refs) {
   watchedBtnHeader.addEventListener('click', onWatched);
   queueBtnHeader.addEventListener('click', onQueue);
   themeSwitch.addEventListener('change', onThemeSwitch);
-  filterBtnHeader.addEventListener('click', onFilter);
+  filterBtnHeader.addEventListener('click', onFilterBtn);
+  filterContainer.addEventListener('change', onFilter);
+  // filterContainer.addEventListener('click', onFilter);
 
   /* MAIN */
   invalidList.addEventListener('click', onTop);

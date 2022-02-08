@@ -89,7 +89,8 @@ export async function fetchApiSearch(query, page) {
 }
 
 /* Запрос фильтр, ещё настраивается */
-export async function fetchApiFilter(page = 1, genre = '', year = '') {
+export async function fetchApiFilter(page = 1, obj = {}) {
+  const { genre, year } = obj;
   const options = {
     params: {
       api_key: API_KEY,
