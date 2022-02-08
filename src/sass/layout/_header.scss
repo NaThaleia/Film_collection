@@ -313,11 +313,51 @@
   border: #ff6b01;
 }
 
+//Filter style
+
+.css-button {
+  font-family: Comic Sans MS;
+  font-style: italic;
+  color: #ffffff;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 0px #3e2e2e solid;
+  background: linear-gradient(180deg, #000000 5%, #3e2e2e 100%);
+  text-shadow: 2px 1px 24px #ffffff;
+  box-shadow: 0px 10px 14px -7px #616174;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+.css-button:hover {
+  background: linear-gradient(180deg, #3e2e2e 5%, #000000 100%);
+  animation: Glow 0.5s ease infinite alternate;
+}
+.css-button-icon {
+  padding: 6px 13px;
+  border-right: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: rgba(0, 0, 0, 0.14) -1px 0px 0px inset;
+}
+.css-button-icon i {
+  position: relative;
+  top: 0px;
+  left: 2px;
+}
+.css-button-text {
+  padding: 6px 18px;
+}
+.css-button-text span {
+  display: block;
+  position: relative;
+  top: 2px;
+}
+
 // Переключатель темы
 
 .toolbar {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  // justify-content: flex-end;
   padding: 0px 0px;
   //position: absolute;
   right: 0;

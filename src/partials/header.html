@@ -1,10 +1,10 @@
-<header class=" header header_imageHome">
-  <div class="header__container  container ">
+<header class="header header_imageHome">
+  <div class="header__container container">
     <nav class="content">
       <h1>
         <a class="header__link" href="#">
           <img class="header__logo" src="./images/film.png" alt="logo" />
-          <span class="header__logoTitle">Filmoteka</span> 
+          <span class="header__logoTitle">Filmoteka</span>
         </a>
       </h1>
       <ul class="header__navList">
@@ -13,41 +13,47 @@
       </ul>
     </nav>
     <div class="search-block">
-      <form class="search-film-form" >
+      <form class="search-film-form">
         <div class="search-film-inputs">
-          <input placeholder="Search movies" class="some-input " type="text" />
+          <input placeholder="Search movies" class="some-input" type="text" />
           <button class="submit"></button>
-        </div> 
+        </div>
       </form>
-      <p class="search-errors is-hidden">Search result not successful. Enter the correct movie name</p>
+      <p class="search-errors is-hidden">
+        Search result not successful. Enter the correct movie name
+      </p>
     </div>
     <div class="library-navigation is-hidden">
-      <button type="button" class=" watched-btn-header orange watched-header">
-        Watched
+      <button type="button" class="watched-btn-header orange watched-header">Watched</button>
+      <button type="button" class="queue-btn-header queue-header">Queue</button>
+    </div>
+    <div class="toolbar container">
+      <button type="button" class="css-button">
+        <span class="css-button-icon"><i class="fa fa-filter" aria-hidden="true"></i></span>
+        <span class="css-button-text"><span>Filter</span></span>
       </button>
-      <button type="button" class=" queue-btn-header queue-header">Queue</button>
-    </div>
-          <div class="toolbar container">
-            <!-- Разметка переключателя темы -->
-            <div class="theme-switch">
-              <svg class="theme-switch__icon-sun" role="img" aria-label="Иконка солнца">
-                <use href="./images/sprite.svg#sun"></use>
-              </svg>
-          
-              <div class="theme-switch__control">
-                <input class="theme-switch__toggle" type="checkbox" name="theme" id="theme-switch-toggle"
-                  aria-label="Переключить между тёмной и светлой темой" />
-                <label aria-hidden="true" class="theme-switch__track" for="theme-switch-toggle">
-                </label>
-                <div aria-hidden="true" class="theme-switch__marker"></div>
-              </div>
-          
-              <svg class="theme-switch__icon-moon" aria-label="Иконка луны">
-                <use href="./images/sprite.svg#moon"></use>
-              </svg>
-            </div>
-          </div>
-    </div>
-  
+      <!-- Разметка переключателя темы -->
+      <div class="theme-switch">
+        <svg class="theme-switch__icon-sun" role="img" aria-label="Иконка солнца">
+          <use href="./images/sprite.svg#sun"></use>
+        </svg>
 
+        <div class="theme-switch__control">
+          <input
+            class="theme-switch__toggle"
+            type="checkbox"
+            name="theme"
+            id="theme-switch-toggle"
+            aria-label="Переключить между тёмной и светлой темой"
+          />
+          <label aria-hidden="true" class="theme-switch__track" for="theme-switch-toggle"> </label>
+          <div aria-hidden="true" class="theme-switch__marker"></div>
+        </div>
+
+        <svg class="theme-switch__icon-moon" aria-label="Иконка луны">
+          <use href="./images/sprite.svg#moon"></use>
+        </svg>
+      </div>
+    </div>
+  </div>
 </header>
