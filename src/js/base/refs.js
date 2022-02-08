@@ -11,6 +11,8 @@ export const refs = {
   watchedBtnHeader: document.querySelector('.watched-header'),
   queueBtnHeader: document.querySelector('.queue-header'),
   themeSwitch: document.querySelector('.theme-switch__toggle'),
+  filterBtnHeader: document.querySelector('.css-button-filter'),
+  filterContainer: document.querySelector('.filter-container'),
 
   /* MAIN */
   invalid: document.querySelector('.invalid'),
