@@ -4,6 +4,6 @@ export default function onLibraryChangeClassBtnQueue(evt) {
   if (!refs.queueBtnHeader.classList.contains('orange')) {
     refs.queueBtnHeader.classList.add('orange');
     refs.watchedBtnHeader.classList.remove('orange');
-    console.log(`add class`);
+    // console.log(`add class`);
   }
 }

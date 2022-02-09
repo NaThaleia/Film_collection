@@ -17,6 +17,8 @@ export const refs = {
   filterContainer: document.querySelector('.filter-container'),
   filterListGenres: document.querySelector('.js-filter-genres'),
   filterListYears: document.querySelector('.js-filter-years'),
+  filterListLanguages: document.querySelector('.js-filter-language'),
+  filterListVoteAverage: document.querySelector('.js-filter-vote_average'),
 
   /* MAIN */
   invalid: document.querySelector('.invalid'),

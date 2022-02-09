@@ -23,19 +23,19 @@ export default function pageLoadingSearch(query, page = 1) {
         }, 5000);
         throw new Error(response.status);
       }
-      spinner('stop');
-      renderCardsHero(data.results);
-      localStorage.setItem('cards', JSON.stringify(data.results));
-      return data;
-    })
-    .then(data => {
-      renderPagination(data.total_pages, data.page);
       const settings = {
         page: data.page,
         fetch: 'Search',
         query: query,
       };
       localStorage.setItem('page', JSON.stringify(settings));
+      localStorage.setItem('cards', JSON.stringify(data.results));
+      return data;
+    })
+    .then(data => {
+      spinner('stop');
+      renderCardsHero(data.results);
+      renderPagination(data.total_pages, data.page);
       return data;
     })
     .catch(data => {

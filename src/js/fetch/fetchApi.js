@@ -90,19 +90,21 @@ export async function fetchApiSearch(query, page) {
 
 /* Запрос фильтр, ещё настраивается */
 export async function fetchApiFilter(page = 1, obj = {}) {
-  const { genre, year } = obj;
+  const { genre, year, vote_average: vote_average = 0, language: language = 'en' } = obj;
+  const gte = 'vote_average.gte';
   const options = {
     params: {
       api_key: API_KEY,
       page: `${page}`, // отвечает за страницу (пример: 1), доступно первые 500 стр.
       with_genres: `${genre}`, // отвечает за жарн (пример: 28)
       primary_release_year: `${year}`, // отвечающий за год выпуска фильма (пример: 2020)
-      // year: `${year}`, // отвечает за фильмы выпущеные до этого года
+      with_original_language: `${language}`, // оригинальный язык фильма (пример: ru)
+      [gte]: `${vote_average}`, // типо рейтинг
     },
   };
 
   try {
-    const response = await axios(`3/discover/movie`, options);
+    const response = await axios(`3/discover/movie?`, options);
     return response.data;
   } catch (error) {
     return error;

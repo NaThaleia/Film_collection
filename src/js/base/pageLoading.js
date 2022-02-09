@@ -8,19 +8,21 @@ export default function pageLoading(page = 1) {
   spinner('start');
   fetchApiWeek(page)
     .then(data => {
-      spinner('stop');
-      renderCardsHero(data.results);
-      localStorage.setItem('cards', JSON.stringify(data.results)); // записывает пришедший массив объектов с бэкенда
-
-      return data;
-    })
-    .then(data => {
-      renderPagination(data.total_pages, data.page);
       const settings = {
         page: data.page,
         fetch: 'Week',
       };
       localStorage.setItem('page', JSON.stringify(settings));
+      localStorage.setItem('cards', JSON.stringify(data.results)); // записывает пришедший массив объектов с бэкенда
+      return data;
+    })
+    .then(data => {
+      spinner('stop');
+      renderCardsHero(data.results);
+      renderPagination(data.total_pages, data.page);
+      return data;
+    })
+    .catch(data => {
       return data;
     });
 }

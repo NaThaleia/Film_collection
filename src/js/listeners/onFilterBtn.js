@@ -1,4 +1,7 @@
 import { refs } from '../base/refs';
+import listLanguage from '../templates/list_language.hbs';
+import listVoteAverage from '../templates/list_vote_average.hbs';
+import onHome from './onHome';
 
 export default function onFilterBtn(evt) {
   if (!refs.filterContainer.classList.contains('filter-container_out-in')) {
@@ -8,6 +11,7 @@ export default function onFilterBtn(evt) {
     refs.filterContainer.classList.remove('filter-container_out-in');
   }
 
+  // localStorage.setItem('filter', JSON.stringify({}));
   /* Добавляем список жанров в фильтер */
   const genres = JSON.parse(localStorage.getItem('genres'));
   const genresList = genres.map(e => `<option value='${e.id}'>${e.name}</option>`);
@@ -27,5 +31,8 @@ export default function onFilterBtn(evt) {
     return str;
   };
 
+  /* Добавляем ещё списки */
   refs.filterListYears.innerHTML = yearsList();
+  refs.filterListLanguages.innerHTML = listLanguage();
+  refs.filterListVoteAverage.innerHTML = listVoteAverage();
 }
