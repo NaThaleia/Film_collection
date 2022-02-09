@@ -1,6 +1,7 @@
 import { refs } from '../base/refs';
 import pageLoading from '../base/pageLoading';
 import pageLoadingSearch from '../base/pageLoadingSearch';
+import pageLoadingFilter from '../base/pageLoadingFilter';
 import onWatched from '../listeners/onWatched';
 import onQueue from '../listeners/onQueue';
 
@@ -55,6 +56,11 @@ export default function onLoadingNextPage(e) {
 
     case 'Queue':
       onQueue(parseInt(nextPage), parseInt(nextPage));
+      break;
+
+    case 'Filter':
+      const obj = JSON.parse(localStorage.getItem('filter'));
+      pageLoadingFilter(parseInt(nextPage), obj);
       break;
 
     default:
