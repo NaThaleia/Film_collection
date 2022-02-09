@@ -16,7 +16,7 @@ export default function onCloseModal() {
   document.body.style.overflow = '';
 
   /* начало */
-  const PAGE_SIZE = 20;
+  const PAGE_SIZE = fnPageSize();
   let currentPage = JSON.parse(localStorage.getItem('page'));
   let totalPage = 1;
   let arr = [];
@@ -38,4 +38,10 @@ export default function onCloseModal() {
     }
     onQueue(currentPage.page, currentPage.page);
   }
+}
+
+function fnPageSize() {
+  if (window.screen.width >= 1024) return 9;
+  if (window.screen.width >= 768 && window.screen.width < 1024) return 8;
+  if (window.screen.width < 768) return 4;
 }

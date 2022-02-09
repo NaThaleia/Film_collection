@@ -9,7 +9,7 @@ export default function onQueue(e, page = 1) {
   refs.hero.innerHTML = '';
   refs.empty.classList.add('hidden');
 
-  const PAGE_SIZE = 20;
+  let PAGE_SIZE = fnPageSize();
   let arr = JSON.parse(localStorage.getItem('library-queue'));
 
   if (!arr || !arr.length) {
@@ -33,4 +33,10 @@ export default function onQueue(e, page = 1) {
 
   renderCardsHero(arr);
   renderPagination(totalPage, page);
+}
+
+function fnPageSize() {
+  if (window.screen.width >= 1024) return 9;
+  if (window.screen.width >= 768 && window.screen.width < 1024) return 8;
+  if (window.screen.width < 768) return 4;
 }
