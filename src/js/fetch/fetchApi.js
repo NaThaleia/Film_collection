@@ -90,7 +90,12 @@ export async function fetchApiSearch(query, page) {
 
 /* Запрос фильтр, ещё настраивается */
 export async function fetchApiFilter(page = 1, obj = {}) {
-  const { genre, year, vote_average: vote_average = 0, language: language = 'en' } = obj;
+  const {
+    genre: genre = '',
+    year: year = '',
+    vote_average: vote_average = '',
+    language: language = '',
+  } = obj;
   const gte = 'vote_average.gte';
   const options = {
     params: {

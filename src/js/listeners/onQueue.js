@@ -16,7 +16,6 @@ export default function onQueue(e, page = 1) {
     refs.pagination.classList.add('hidden');
     refs.hero.classList.add('library-foto');
     refs.empty.classList.remove('hidden');
-    console.log('not data');
     return;
   }
 

@@ -21,6 +21,10 @@
   }
 }
 
+.filter-btn__text--accent {
+  color: $accent-color-focus;
+}
+
 .filter-container_out-in {
   opacity: 1;
   z-index: 2;

@@ -3,7 +3,7 @@ import renderModalTeam from '../templates/modalTeam.hbs';
 
 let instance;
 
-export default function onTeamModal(e) {
+export default function onTeamModal() {
   const text = renderModalTeam();
 
   instance = basicLightbox.create(text, {

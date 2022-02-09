@@ -1,17 +1,15 @@
-import { modalRefs, myCard } from "../base/refs";
+import { modalRefs, myCard } from '../base/refs';
 export default function onModalBtn(evt) {
-  console.log('onModalWatched in process');
-
-  let btn = "";
-  let btnName = "";
-// Какая кнопка нажата: "Watched" или "Queue" ?
-  if (evt.currentTarget.classList.contains("modal-watched")) {
-    btn = "modalWatched";
-    btnName = "watched";
+  let btn = '';
+  let btnName = '';
+  // Какая кнопка нажата: "Watched" или "Queue" ?
+  if (evt.currentTarget.classList.contains('modal-watched')) {
+    btn = 'modalWatched';
+    btnName = 'watched';
   }
-  if (evt.currentTarget.classList.contains("modal-queue")) {
-    btn = "modalQueue";
-    btnName = "queue";
+  if (evt.currentTarget.classList.contains('modal-queue')) {
+    btn = 'modalQueue';
+    btnName = 'queue';
   }
   // Проверка, есть ли этот фильм в Watched или Queue
   if (modalRefs[btn].textContent === `add to ${btnName}`) {
@@ -30,11 +28,11 @@ export default function onModalBtn(evt) {
 
 function addCardToLS(lib) {
   let cards = [];
-// проверка - если фильм уже был добавлен, берём данные
+  // проверка - если фильм уже был добавлен, берём данные
   if (JSON.parse(localStorage.getItem(lib)) !== null) {
     cards = JSON.parse(localStorage.getItem(lib));
   }
-  cards.unshift(myCard.data); 
+  cards.unshift(myCard.data);
   localStorage.setItem(lib, JSON.stringify(cards));
 }
 

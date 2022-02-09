@@ -1,17 +1,11 @@
-import { refs, modalRefs } from '../base/refs';
+import { modalRefs } from '../base/refs';
 import onModalEscKeyPress from './onModalEscKeyPress';
 import onBackdropClick from './onBackdropClick';
 import onModalWatched from './onModalWatched';
-// import onModalQueue from './onModalQueue';
 import onQueue from './onQueue';
 import onWatched from './onWatched';
 
 export default function onCloseModal() {
-  console.log('Закрыть модалку');
-  // const modalWatched = document.querySelector('.modal-watched');
-  // const modalQueue = document.querySelector('.modal-queue');
-  // const modalClose = document.querySelector('.modal-close');
-
   modalRefs.modalWatched.removeEventListener('click', onModalWatched);
   modalRefs.modalQueue.removeEventListener('click', onModalWatched);
   modalRefs.modalClose.removeEventListener('click', onCloseModal);

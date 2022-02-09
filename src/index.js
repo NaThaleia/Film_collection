@@ -7,9 +7,12 @@ import theme from './js/base/theme';
 
 function start() {
   theme();
-  fetchApiGenresList();
   pageLoading();
   eventListener(refs);
 }
 
-start();
+fetchApiGenresList()
+  .catch(error => console.log(error))
+  .finally(() => {
+    start();
+  });
