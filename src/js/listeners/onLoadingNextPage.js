@@ -35,7 +35,7 @@ export default function onLoadingNextPage(e) {
       break;
 
     case 'right-end':
-      nextPage = parseInt(currentPage.page) + 6; // исделано по инвалидному
+      nextPage = parseInt(currentPage.page) + 7; // исделано по инвалидному // условие i < 7  || 6
       break;
 
     default:

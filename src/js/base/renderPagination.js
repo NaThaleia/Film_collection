@@ -66,7 +66,8 @@ export default function renderPagination(maxPage, currentPage) {
     }
 
     if (currentPage < 6) {
-      for (let i = 2; i < 7; i += 1) {
+      for (let i = 2; i < 8; i += 1) {
+        // условие i < 7
         if (i === currentPage) {
           arrPage.push(`<div class="page active" data-page="${i}">${i}</div>`);
           continue;
