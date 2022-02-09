@@ -30,21 +30,17 @@
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  // justify-content: space-evenly;
   list-style: none;
   margin: 0;
   padding: 0;
-  // @media screen and (max-width: 767px) {
-  //   width: 618px;
-  // }
+
   @media screen and (min-width: 768px) {
     flex-wrap: nowrap;
-    // width: 500px;
   }
 }
 
 .filter-list-item {
-  // width: 200px;
   @media screen and (max-width: 767px) {
     &:not(last-child) {
       margin-bottom: 10px;
@@ -55,8 +51,10 @@
 .filter-lable {
   line-height: 1.17;
   color: $main-color;
-
-  margin-right: 5px;
+  margin-right: 15px;
+  @media screen and (min-width: 768px) {
+    margin-right: 5px;
+  }
 }
 
 .label-styles {
