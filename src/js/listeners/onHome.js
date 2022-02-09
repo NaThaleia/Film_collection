@@ -8,6 +8,8 @@ export default function onHome() {
   refs.invalidList.innerHTML = '';
   refs.invalid.classList.add('hidden');
   refs.empty.classList.add('hidden');
+  refs.filterBtnHeader.classList.remove('is-hidden');
+  refs.filterContainer.classList.remove('filter-container_out-in');
 
   pageLoading();
   onHomeChangeClass();

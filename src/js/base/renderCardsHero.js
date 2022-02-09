@@ -1,5 +1,6 @@
 import { refs } from './refs';
-import cardsHero from '../templates/heroCards.hbs';
+import heroCards from '../templates/heroCards.hbs';
+import heroCardsLibrary from '../templates/heroCardsLibrary.hbs';
 
 /* Функция renderCardsHero на входе принимает масси с бэкенда и череш шаблон формирует разметку блока Hero */
 export default function renderCardsHero(arr) {
@@ -7,7 +8,21 @@ export default function renderCardsHero(arr) {
   const arrNewYear = newYear(arr); // в исходном массиве с fetch  меняем год и передаем дальше
   const arrNewGenres = newGenres(arrNewYear); // в исходном массиве с fetch  меняем жанр и передаем дальше
 
-  const cards = cardsHero(arrNewGenres);
+  const currentPage = JSON.parse(localStorage.getItem('page'));
+  const filter = {
+    ...JSON.parse(localStorage.getItem('filter')),
+  };
+
+  let cards;
+
+  /* Отображение рейтинга на странице */
+  if (currentPage.fetch === 'Watched' || currentPage.fetch === 'Queue') {
+    cards = heroCardsLibrary(arrNewGenres);
+  } else if (parseInt(filter.vote_average) && currentPage.fetch === 'Filter') {
+    cards = heroCardsLibrary(arrNewGenres);
+  } else {
+    cards = heroCards(arrNewGenres);
+  }
 
   refs.hero.insertAdjacentHTML('beforeend', cards);
 }
