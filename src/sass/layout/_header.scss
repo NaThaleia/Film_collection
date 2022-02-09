@@ -8,24 +8,24 @@
 }
 .header_imageHome {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-    url(../images/mobile/header_home_mobile.jpg);
+    url(../images/mobile/header_home_mobile@2x.jpg);
   @media (min-device-pixel-ratio: 2) {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-      url(../images/mobile/header_home_mobile@2x.jpg);
+      url(../images/mobile/header_home_mobile.jpg);
   }
   @media screen and (min-width: 768px) {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-      url(../images/desktop/header_home.jpg);
+      url(../images/desktop/header_home@2x.jpg);
     @media (min-device-pixel-ratio: 2) {
       background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-        url(../images/desktop/header_home@2x.jpg);
+        url(../images/desktop/header_home.jpg);
     }
     @media screen and (min-width: 1024px) {
       background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-        url(../images/Rectangle1024x1.jpg);
+        url(../images/rectangle2-min.jpg);
       @media (min-device-pixel-ratio: 2) {
         background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-          url(../images/rectangle2-min.jpg);
+          url(../images/Rectangle1024x1.jpg);
       }
     }
   }
@@ -44,24 +44,24 @@
 
 .header_imageLibrery {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-    url(../images/mobile/header_mylibrary_mobile.jpg);
+    url(../images/mobile/header_mylibrary_mobile@2x.jpg);
   @media (min-device-pixel-ratio: 2) {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-      url(../images/mobile/header_mylibrary_mobile@2x.jpg);
+      url(../images/mobile/header_mylibrary_mobile.jpg);
   }
   @media screen and (min-width: 768px) {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-      url(../images/desktop/header_mylibrary.jpg);
+      url(../images/desktop/header_mylibrary@2x.jpg);
     @media (min-device-pixel-ratio: 2) {
       background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-        url(../images/desktop/header_mylibrary@2x.jpg);
+        url(../images/desktop/header_mylibrary.jpg);
     }
     @media screen and (min-width: 1024px) {
       background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-        url(../images/Rectangle1024x1.2.jpg);
+        url(../images/rectangle1-min.jpg);
       @media (min-device-pixel-ratio: 2) {
         background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-          url(../images/rectangle1-min.jpg);
+          url(../images/Rectangle1024x1.2.jpg);
       }
     }
   }
@@ -317,14 +317,15 @@
 
 .css-button-filter {
   margin-top: -10px;
-  font-family: Comic Sans MS;
-  font-style: italic;
-  color: #ffffff;
-  font-size: 15px;
+  // font-family: Comic Sans MS;
+  // font-style: italic;
+  color: $main-color;
+  font-size: 14px;
+  line-height: 1.17;
   border-radius: 8px;
   border: 0px #3e2e2e solid;
   background: linear-gradient(180deg, #000000 5%, #3e2e2e 100%);
-  text-shadow: 2px 1px 24px #ffffff;
+  text-shadow: 2px 1px 24px $main-color;
   box-shadow: 0px 10px 14px -7px #616174;
   cursor: pointer;
   display: inline-flex;
