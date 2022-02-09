@@ -14,6 +14,7 @@ export const refs = {
 
   /* FILTER */
   filterBtnHeader: document.querySelector('.css-button-filter'),
+  filterBtnHeaderText: document.querySelector('.js-filter-btn-text'),
   filterContainer: document.querySelector('.filter-container'),
   filterListGenres: document.querySelector('.js-filter-genres'),
   filterListYears: document.querySelector('.js-filter-years'),

@@ -1,17 +1,23 @@
 import { refs } from '../base/refs';
 import listLanguage from '../templates/list_language.hbs';
 import listVoteAverage from '../templates/list_vote_average.hbs';
-import onHome from './onHome';
 
-export default function onFilterBtn(evt) {
+export default function onFilterBtn() {
   if (!refs.filterContainer.classList.contains('filter-container_out-in')) {
+    /* открываем фильтер */
     refs.filterContainer.classList.add('filter-container_out-in');
+    refs.filterContainer.classList.remove('hidden');
+    refs.filterBtnHeaderText.textContent = 'Hide';
+    refs.filterBtnHeaderText.classList.add('filter-btn__text--accent');
     localStorage.setItem('filter', JSON.stringify({}));
   } else {
+    /* закрываем фильтер */
+    refs.filterBtnHeaderText.textContent = 'Filter';
+    refs.filterBtnHeaderText.classList.remove('filter-btn__text--accent');
+    refs.filterContainer.classList.add('hidden');
     refs.filterContainer.classList.remove('filter-container_out-in');
   }
 
-  // localStorage.setItem('filter', JSON.stringify({}));
   /* Добавляем список жанров в фильтер */
   const genres = JSON.parse(localStorage.getItem('genres'));
   const genresList = genres.map(e => `<option value='${e.id}'>${e.name}</option>`);

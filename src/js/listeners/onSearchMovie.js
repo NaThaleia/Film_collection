@@ -13,6 +13,9 @@ export default function onSearchMovie(e) {
   refs.pagination.classList.add('hidden');
   refs.searchErrors.classList.add('is-hidden');
   refs.invalid.classList.add('hidden');
+  refs.filterBtnHeaderText.textContent = 'Filter';
+  refs.filterBtnHeaderText.classList.remove('filter-btn__text--accent');
+  refs.filterContainer.classList.add('hidden');
   refs.filterContainer.classList.remove('filter-container_out-in');
 
   pageLoadingSearch(query);

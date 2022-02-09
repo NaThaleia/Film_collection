@@ -36,9 +36,10 @@ export default function eventListeners(refs) {
   watchedBtnHeader.addEventListener('click', onWatched);
   queueBtnHeader.addEventListener('click', onQueue);
   themeSwitch.addEventListener('change', onThemeSwitch);
+
+  /* FILTER */
   filterBtnHeader.addEventListener('click', onFilterBtn);
   filterContainer.addEventListener('change', onFilter);
-  // filterContainer.addEventListener('click', onFilter);
 
   /* MAIN */
   invalidList.addEventListener('click', onTop);

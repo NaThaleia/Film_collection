@@ -1,7 +1,5 @@
-import { modalRefs, myCard } from "../base/refs";
-export default function onModalQueue () {
-  console.log('onModalQueue in process');
-
+import { modalRefs, myCard } from '../base/refs';
+export default function onModalQueue() {
   if (modalRefs.modalQueue.textContent === 'add to queue') {
     addCardToLS();
     modalRefs.modalQueue.textContent = 'remove from queue';
@@ -34,7 +32,7 @@ function addCardToLS() {
 function removeCardFromLS() {
   const queueCards = JSON.parse(localStorage.getItem('library-queue'));
   const indexInQueueCards = queueCards.findIndex(el => el.id === myCard.data.id);
-  console.log(indexInQueueCards);
+
   queueCards.splice(indexInQueueCards, 1);
 
   localStorage.setItem('library-queue', JSON.stringify(queueCards));
