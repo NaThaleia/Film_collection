@@ -56,6 +56,9 @@
   text-align: center;
   padding: 10px 0px 1px 0px;
   border-radius: 5px;
+
+  /* добавили ховер и фокус на точки так как они стали активные - Дима */
+  transition: 0.5s;
 }
 @media screen and (max-width: 767px) {
   .threeDots {
@@ -73,6 +76,15 @@
   .threeDots {
     display: inline-block;
   }
+}
+
+/* добавили ховер и фокус на точки так как они стали активные - Дима */
+.threeDots:hover,
+:focus {
+  cursor: pointer;
+  background-color: #ff6b08;
+  color: #ffffff;
+  border-radius: 5px;
 }
 
 .pagination__wrapper_pages {
