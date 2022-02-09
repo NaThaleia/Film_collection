@@ -1,29 +1,51 @@
 .filter-container {
-  // margin-top: 10px;
   padding: 20px;
-  background-color: orange;
-  border: solid 1px black;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: solid 3px #ff6b08;
   border-radius: 20px;
   position: absolute;
   opacity: 0;
   left: 50%;
   transform: translate(-50%, 0);
   transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (max-width: 767px) {
+    width: 130px;
+  }
 }
 
 .filter-container_out-in {
   opacity: 1;
+  z-index: 2;
 }
 
 .filter-list {
-  display: flex;
   list-style: none;
   margin: 0px;
   padding: 0px;
   justify-content: center;
-}
-.filter-list-item {
-  &:not(last-child) {
-    margin-right: 20px;
+  @media screen and (max-width: 767px) {
   }
+  @media screen and (min-width: 768px) {
+    display: flex;
+
+    width: 500px;
+  }
+}
+
+.filter-list-item {
+  @media screen and (max-width: 767px) {
+    &:not(last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    &:not(last-child) {
+      margin-right: 20px;
+    }
+  }
+}
+
+.filter-lable {
+  color: white;
 }
