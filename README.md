@@ -1,6 +1,8 @@
+# Вас приветствует команда nIceteam.
+
 Проект сайта реализован в двухнедельный срок силами 8 разработчиков с применением **методологии
 SCRUM**. По предоставленому
-[макету](https://www.figma.com/file/lA5plQSUEbIKOSJHfuPpXO/Filmoteka?node-id=0%3A1) из **Figma**
+[макету](https://www.figma.com/file/lA5plQSUEbIKOSJHfuPpXO/Filmoteka?node-id=0%3A1) из **Figma**.
 
 В основу брался принцип юзабилити.
 
@@ -21,7 +23,6 @@ SCRUM**. По предоставленому
 - Figma
 - Git/GitHub
 - VSCode
-- Webpack
 - Parcel
 - Node.js
 
