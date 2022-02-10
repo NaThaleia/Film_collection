@@ -259,11 +259,13 @@
 .search-errors {
   display: block;
   margin-top: 22px;
+  margin-bottom: 5px;
   font-size: 14px;
   line-height: 1.6;
   color: #ff001b;
   @media screen and (min-width: 768px) {
     width: 380px;
+    margin-bottom: 0;
   }
 }
 .library-navigation {
