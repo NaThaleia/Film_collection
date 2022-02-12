@@ -83,4 +83,14 @@
   .top-item__title {
     color: $main-color;
   }
+  .footer {
+    filter: invert(100%) drop-shadow(4px 4px 3px rgba(140, 140, 140, 0.6));
+  }
+  .fa-heart {
+    filter: invert(1);
+  }
+  .team-modal-btn__styles {
+    color: $main-color;
+    filter: invert(1);
+  }
 }

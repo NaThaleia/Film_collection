@@ -60,6 +60,11 @@
   /* добавили ховер и фокус на точки так как они стали активные - Дима */
   transition: 0.5s;
 }
+@media screen and (max-width: 400px) {
+  .threeDots {
+    display: none;
+  }
+}
 @media screen and (max-width: 767px) {
   .threeDots {
     width: 30px;
@@ -100,16 +105,13 @@
   width: 40px;
   height: 40px;
   text-align: center;
-
   appearance: none;
   border: none;
   outline: none;
   cursor: pointer;
   margin: 5px;
-
   transition: 0.5s;
   color: #000000;
-
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -158,5 +160,11 @@
     width: 30px;
     height: 30px;
     margin: 2px;
+  }
+}
+
+.last-page {
+  @media screen and (max-width: 425px) {
+    display: none;
   }
 }
