@@ -258,14 +258,19 @@
 }
 .search-errors {
   display: block;
-  margin-top: 22px;
-  margin-bottom: 5px;
+  margin-top: 12px;
+  margin-bottom: 10px;
   font-size: 14px;
   line-height: 1.6;
   color: #ff001b;
+  @media screen and (min-width: 428px) {
+    margin-bottom: 17px;
+    margin-top: 17px;
+  }
   @media screen and (min-width: 768px) {
     width: 380px;
-    margin-bottom: 0;
+    margin-bottom: 5px;
+    margin-top: 22px;
   }
 }
 .library-navigation {
